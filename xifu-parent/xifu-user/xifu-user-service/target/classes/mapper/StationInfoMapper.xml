@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xifu.com.mapper.StationInfoMapper">
+    <resultMap id="BaseResultMap" type="xifu.com.pojo.StationInfo">
+        <result column="id" property="id"/>
+        <result column="station_code" property="stationCode"/>
+        <result column="station_name" property="stationName"/>
+        <result column="installed_capacity" jdbcType="DECIMAL" property="installed_capacity"/>
+        <result column="station_build_status" property="stationBuildStatus"/>
+        <result column="produce_date" jdbcType="DATE" property="produceDate"/>
+        <result column="online_type" property="onlineType"/>
+        <result column="station_type" property="stationType"/>
+        <result column="inverter_type" property="inverterType"/>
+        <result column="install_angle" jdbcType="DECIMAL" property="installAngle"/>
+        <result column="assembly_layout" property="assemblyLayout"/>
+        <result column="floorSpace" jdbcType="DECIMAL" property="floorSpace"/>
+        <result column="amsl" jdbcType="DECIMAL" property="amsl"/>
+        <result column="life_cycle" property="lifeCycle"/>
+        <result column="safe_run_datetime" property="safeRunDatetime"/>
+        <result column="is_poverty_relief" property="isPovertyRelief"/>
+        <result column="station_file_id" property="stationFileId"/>
+        <result column="station_addr" property="stationAddr"/>
+        <result column="station_desc" property="stationDesc"/>
+        <result column="contact_people" property="contactPeople"/>
+        <result column="phone" property="phone"/>
+        <result column="station_price" property="stationPrice"/>
+        <result column="latitude" property="latitude"/>
+        <result column="longitude" property="longitude"/>
+        <result column="time_zone" property="timeZone"/>
+        <result column="area_code" property="areaCode"/>
+        <result column="enterprise_id" property="enterpriseId"/>
+        <result column="domain_id" property="domainId"/>
+        <result column="is_delete" property="isDelete"/>
+        <result column="create_user_id" property="createUserId"/>
+        <result column="create_date" property="createDate"/>
+        <result column="update_user_id" property="updateUserId"/>
+        <result column="update_date" property="updateDate"/>
+        <result column="is_monitor" property="isMonitor"/>
+    </resultMap>
+    <!-- 查询登录用户管理的用户信息 -->
+    <!-- 查询企业管理员或者超级管理员的区域所在的位置 -->
+    <select id="findStationOfDomain" parameterType="xifu.com.dto.StationRequest" resultMap="BaseResultMap">
+        SELECT S.* FROM tb_station_info S
+        WHERE
+          S.enterprise_id = #{enterpriseId}
+            <if test="domainId != null">
+                AND S.domain_id IN (
+                  SELECT id FROM tb_domain_info WHERE  enterprise_id = #{enterpriseId} AND path LIKE
+                   (
+                      SELECT CONCAT(path, '%') FROM tb_domain_info WHERE id = #{domainId}
+                   )
+                )
+            </if>
+            <if test="stationName != null and stationName!= ''">
+                <bind name="stationName" value="'%' + _parameter.stationName + '%'" />
+                AND S.station_name LIKE #{stationName}
+            </if>
+            <if test="produceDate != null">
+                AND S.produce_date = #{produceDate}
+            </if>
+            <if test="onlineType != null">
+                AND S.online_type = #{online_type}
+            </if>
+            <if test="inverterType != null">
+                AND S.inverter_type = #{inverterType}
+            </if>
+            <if test="stationBuildStatus != null">
+                AND S.station_build_status = #{stationBuildStatus}
+            </if>
+    </select>
+    <!-- 普通用户查询他管理的电站信息 -->
+    <select id="findStationOfDomainByUser" parameterType="xifu.com.dto.StationRequest" resultMap="BaseResultMap">
+        SELECT S.* FROM tb_station_info S
+        WHERE
+        S.enterprise_id = #{enterpriseId}
+        AND S.station_code IN (
+          SELECT station_code FROM tb_user_station WHERE user_id = #{userId}
+        )
+        <if test="domainId != null">
+            AND S.domain_id IN (
+            SELECT id FROM tb_domain_info WHERE  enterprise_id = #{enterpriseId} AND path LIKE
+                (
+                  SELECT CONCAT(path, '%') FROM tb_domain_info WHERE id = #{domainId}
+                )
+            )
+        </if>
+        <if test="stationName != null and stationName!= ''">
+            <bind name="stationName" value="'%' + _parameter.stationName + '%'" />
+            AND S.station_name LIKE #{stationName}
+        </if>
+        <if test="produceDate != null">
+            AND S.produce_date = #{produceDate}
+        </if>
+        <if test="onlineType != null">
+            AND S.online_type = #{online_type}
+        </if>
+        <if test="inverterType != null">
+            AND S.inverter_type = #{inverterType}
+        </if>
+        <if test="stationBuildStatus != null">
+            AND S.station_build_status = #{stationBuildStatus}
+        </if>
+    </select>
+</mapper>

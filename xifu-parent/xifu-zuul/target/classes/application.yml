@@ -1,0 +1,42 @@
+server:
+  port: ${port:8001}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eurekaServiceUrl:http://127.0.0.1:7001/eureka/}
+
+# 注册的服务名称
+spring:
+  application:
+    name: service-zuul
+  redis:
+    password: ${redisPassword:123456}
+
+xifu:
+  params:
+    whiteList: # 请求的白名单的集合
+      - /user/login
+      - /user/logout
+    blackList: # 请求的黑名单
+      - /user/page
+
+zuul:
+  #strip-prefix: true # 去掉前缀
+  routes:
+    user:
+      path: /user/** # 拦截的路径
+      #url: http://localhost:8081
+      serviceId: xifu-user
+    db:
+      path: /db/**
+      serviceId: xifu-dev-db
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread: # 设置超时时长为6s
+            timeoutInMilliseconds: 6000

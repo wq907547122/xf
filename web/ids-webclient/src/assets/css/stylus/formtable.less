@@ -1,0 +1,48 @@
+// 用于对form表单使用table表格框的样式
+@myborder: #CAE7EF;
+@myNum: 5px;
+.formtable{ // 避免污染其他的样式
+  .myElRowClass{
+    .el-col{
+      padding: 0 @myNum;
+      border-right: 1px solid @myborder;
+      border-top: 1px solid @myborder;
+      &:first-child{
+        border-left: 1px solid @myborder;
+      }
+    }
+    &:last-child{
+      .el-col {
+        border-bottom: 1px solid @myborder;
+      }
+    }
+    /deep/ .myHeightRowClass{ // 设置对应的高度，对于switch的高度不同的，需要设置这个属性
+      .el-form-item__content {
+        line-height: 46px;
+      }
+    }
+  }
+  .el-form-item{
+    margin-bottom: 0;
+    /deep/.el-form-item__label{
+      margin-top: 1px;
+    }
+    /deep/ .el-form-item__content{
+      border-left: 1px solid @myborder;
+       padding-left: @myNum;
+      & > div{
+        padding: @myNum 0;
+      }
+    }
+  }
+  .myPositionClass{
+    /deep/.el-form-item{
+      margin-bottom: 0;
+      padding: 5px 0;
+    }
+    /deep/ .el-form-item__content{
+      border-left: none;
+      padding-left: 0;
+    }
+  }
+}

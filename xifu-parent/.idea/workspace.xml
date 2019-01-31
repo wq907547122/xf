@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="72071995-a34b-48d9-8d5b-5bb4ca1c9e82" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-register/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-zuul/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-common/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-user/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-user/xifu-user-interface/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-user/xifu-user-service/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-dev/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-dev/xifu-dev-interface/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-dev/xifu-dev-network-service/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-dev/xifu-dev-db-service/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-dev/xifu-dev-analysis-alarm-service/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-dev/xifu-dev-service/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-dev/xifu-dev-alarm-service/target/" />
+    <ignored path="$PROJECT_DIR$/xifu-filemanage/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="StationInfoController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/StationInfoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="33" column="48" lean-forward="true" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StationInfo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/pojo/StationInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DomainInfoController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/DomainInfoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="106" column="63" lean-forward="false" selection-start-line="106" selection-start-column="63" selection-end-line="106" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StationInfoService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/StationInfoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DomainInfoService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/DomainInfoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="153" column="46" lean-forward="false" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StationInfoMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/resources/mapper/StationInfoMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="79" column="32" lean-forward="true" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+              <folding>
+                <marker date="1548830756559" expanded="true" signature="2677:3097" ph="SELECT S.* F... tb_station_info" />
+                <marker date="1548830756559" expanded="true" signature="2865:3079" ph="SELECT id FR... tb_domain_info" />
+                <marker date="1548830756559" expanded="true" signature="2991:3058" ph="SELECT CONCA... tb_domain_info" />
+                <marker date="1548830756559" expanded="true" signature="4116:4182" ph="SELECT stati... tb_user_station" />
+                <marker date="1548830756559" expanded="true" signature="4275:4479" ph="SELECT id FR... tb_domain_info" />
+                <marker date="1548830756559" expanded="true" signature="4394:4461" ph="SELECT CONCA... tb_domain_info" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/TreeDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StationInfoMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/mapper/StationInfoMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="25" column="47" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StationRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/StationRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExceptionEnum.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xifu-common/src/main/java/xifu/com/exception/ExceptionEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Arquillian JUnit Test Class" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>tokenId</find>
+      <find>mapperLocations</find>
+      <find>Base_Column_List</find>
+      <find>Example</find>
+      <find>enterpriseId</find>
+      <find>hystrix</find>
+      <find>ConfigurationProperties</find>
+      <find>HystrixMetricsProperties</find>
+    </findStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/pojo/Enterprise.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/utils/CodecUtil.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/utils/UserLoginUtils.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/mapper/EnterpriseMapper.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/pojo/DomainInfo.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/resources/mapper/DomainInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/mapper/DomainInfoMapper.java" />
+        <option value="$PROJECT_DIR$/xifu-common/src/main/java/xifu/com/advice/GlobalExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/vo/AuthUserInfo.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/config/DateConverterConfig.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/pojo/Auth.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/AuthService.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/AuthController.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/mapper/AuthMapper.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/pojo/Role.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/RoleAuthDto.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/resources/mapper/DomainInfoMapper2.xml" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/EnterpriseController.java" />
+        <option value="$PROJECT_DIR$/xifu-common/src/main/java/xifu/com/vo/PageRequestInfo.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/UserDto.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/EnterpriseService.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/RoleController.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/mapper/RoleMapper.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/resources/mapper/RoleMapper.xml" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/RoleService.java" />
+        <option value="$PROJECT_DIR$/xifu-zuul/src/main/java/xifu/com/filter/AuthFilter.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/pojo/User.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/UserService.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/config/WebMvcConfig.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/config/MyWebMvcConfig.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/intercepters/UserAuthInterceptor.java" />
+        <option value="$PROJECT_DIR$/xifu-zuul/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/TreeDto.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/DomainInfoController.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/DomainInfoService.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/pojo/StationInfo.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/RoleDto.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/StationDto.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/RoleRequest.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/UserRequest.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/StationRequest.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/mapper/StationInfoMapper.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/resources/mapper/StationInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/xifu-common/src/main/java/xifu/com/exception/ExceptionEnum.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/StationInfoService.java" />
+        <option value="$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/StationInfoController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="D:\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="xifu-user-interface" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="xifu-user-interface" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1932" />
+    <option name="height" value="922" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CodeSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>Encapsulation issuesJava</id>
+          </State>
+          <State>
+            <id>Inheritance issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>SetupSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring AOPSpring</id>
+          </State>
+          <State>
+            <id>Spring BatchSpring</id>
+          </State>
+          <State>
+            <id>Spring BootSpring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+          <State>
+            <id>Spring DataSpring</id>
+          </State>
+          <State>
+            <id>Spring IntegrationSpring</id>
+          </State>
+          <State>
+            <id>Spring MVCSpring</id>
+          </State>
+          <State>
+            <id>Spring OSGiSpring</id>
+          </State>
+          <State>
+            <id>Spring SecuritySpring</id>
+          </State>
+          <State>
+            <id>Spring Web FlowSpring</id>
+          </State>
+          <State>
+            <id>Spring Web ServicesSpring</id>
+          </State>
+          <State>
+            <id>Spring WebSocketSpring</id>
+          </State>
+          <State>
+            <id>XMLSpring CoreSpring</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpringJavaAutowiringInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-interface" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="intercepters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xifu-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xifu-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user" type="462c0819:PsiDirectoryNode" />
+              <item name="xifu-user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="SearchEverywhereHistoryKey" value="Hystrix*properties&#9;PSI&#9;JAVA://com.netflix.hystrix.strategy.properties.HystrixPropertiesCollapserDefault&#10;role&#9;FILE&#9;file://D:/xifu/xifu-parent/xifu-user/xifu-user-interface/src/main/java/xifu/com/pojo/Role.java&#10;WebMvcConfigurerAdapter&#9;FILE&#9;jar://D:/repo/org/springframework/spring-webmvc/5.1.3.RELEASE/spring-webmvc-5.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.java&#10;ZuulFil&#9;FILE&#9;jar://D:/repo/com/netflix/zuul/zuul-core/1.3.1/zuul-core-1.3.1.jar!/com/netflix/zuul/ZuulFilter.class" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../web/ids-webclient" />
+    <property name="extract.method.default.visibility" value="private" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="xifu.com.mapper" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xifu\xifu-parent\xifu-user\xifu-user-service\src\main\resources\mapper" />
+      <recent name="D:\xifu\xifu-parent\xifu-user\xifu-user-service\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.XifuRandomUtils">
+    <configuration name="DbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="xifu.com.DbApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="xifu-dev-db-service" />
+      <envs />
+    </configuration>
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="xifu.com.pojo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="xifu.com.EurekaApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="xifu-register" />
+      <envs />
+    </configuration>
+    <configuration name="FileManageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="xifu.com.FileManageApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="xifu-filemanage" />
+      <envs />
+    </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="xifu.com.pojo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="xifu.com.UserApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="xifu-user-service" />
+      <envs />
+    </configuration>
+    <configuration name="XifuRandomUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="xifu.com.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="xifu.com.utils.XifuRandomUtils" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="xifu-common" />
+      <envs />
+    </configuration>
+    <configuration name="ZuulAuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="xifu.com.pojo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="xifu.com.ZuulAuthApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="xifu-zuul" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Spring Boot.DbApplication" />
+      <item index="1" class="java.lang.String" itemvalue="Spring Boot.FileManageApplication" />
+      <item index="2" class="java.lang.String" itemvalue="Application.XifuRandomUtils" />
+      <item index="3" class="java.lang.String" itemvalue="Spring Boot.EurekaApplication" />
+      <item index="4" class="java.lang.String" itemvalue="Spring Boot.ZuulAuthApplication" />
+      <item index="5" class="java.lang.String" itemvalue="Spring Boot.UserApplication" />
+    </list>
+    <recent_temporary>
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.UserApplication" />
+        <item index="1" class="java.lang.String" itemvalue="Spring Boot.ZuulAuthApplication" />
+        <item index="2" class="java.lang.String" itemvalue="Spring Boot.EurekaApplication" />
+        <item index="3" class="java.lang.String" itemvalue="Application.XifuRandomUtils" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="72071995-a34b-48d9-8d5b-5bb4ca1c9e82" name="Default" comment="" />
+      <created>1546482415675</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546482415675</updated>
+      <workItem from="1546482419180" duration="26188000" />
+      <workItem from="1546563888410" duration="8122000" />
+      <workItem from="1546822822624" duration="6596000" />
+      <workItem from="1546840353055" duration="8180000" />
+      <workItem from="1546855002164" duration="5171000" />
+      <workItem from="1546909037435" duration="1668000" />
+      <workItem from="1546995591683" duration="646000" />
+      <workItem from="1547082329350" duration="636000" />
+      <workItem from="1547195214056" duration="6210000" />
+      <workItem from="1547428152429" duration="17458000" />
+      <workItem from="1547513984467" duration="24599000" />
+      <workItem from="1547601360726" duration="20171000" />
+      <workItem from="1547686375691" duration="6742000" />
+      <workItem from="1547773091370" duration="23716000" />
+      <workItem from="1548032508034" duration="10869000" />
+      <workItem from="1548118700263" duration="18633000" />
+      <workItem from="1548205205171" duration="18534000" />
+      <workItem from="1548291633498" duration="20163000" />
+      <workItem from="1548378716958" duration="12941000" />
+      <workItem from="1548637222074" duration="19511000" />
+      <workItem from="1548723492065" duration="15018000" />
+      <workItem from="1548810181921" duration="17972000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ElasticSearchTest_createIndex - 2019.01.07 at 18h 35m 50s.xml">
+      <configuration name="ElasticSearchTest.createIndex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ElasticSearchTest_createIndex - 2019.01.07 at 18h 36m 41s.xml">
+      <configuration name="ElasticSearchTest.createIndex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ElasticSearchTest_createIndex - 2019.01.07 at 18h 44m 25s.xml">
+      <configuration name="ElasticSearchTest.createIndex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ElasticSearchTest_createIndex - 2019.01.07 at 18h 45m 21s.xml">
+      <configuration name="ElasticSearchTest.createIndex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ElasticSearchTest_createIndex - 2019.01.07 at 18h 46m 09s.xml">
+      <configuration name="ElasticSearchTest.createIndex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ElasticSearchTest_insertData - 2019.01.07 at 18h 29m 03s.xml">
+      <configuration name="ElasticSearchTest.insertData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ElasticSearchTest_insertData - 2019.01.07 at 18h 38m 21s.xml">
+      <configuration name="ElasticSearchTest.insertData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ElasticSearchTest_insertData - 2019.01.07 at 18h 47m 06s.xml">
+      <configuration name="ElasticSearchTest.insertData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ElasticSearchTest_insertData - 2019.01.14 at 10h 41m 54s.xml">
+      <configuration name="ElasticSearchTest.insertData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ElasticSearchTest_insertData - 2019.01.14 at 15h 24m 12s.xml">
+      <configuration name="ElasticSearchTest.insertData" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="289744000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30916846" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/EnterpriseService.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="62" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/vo/AuthUserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-286">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/resources/mapper/RoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding>
+            <marker date="1548659812146" expanded="true" signature="643:700" ph="SELECT auth_... tb_role_auth" />
+            <marker date="1548659812146" expanded="true" signature="795:844" ph="DELETE FROM " />
+            <marker date="1548659812146" expanded="true" signature="973:1037" ph="SELECT COUNT... tb_user_role" />
+            <marker date="1548659812146" expanded="true" signature="1121:1242" ph="SELECT id,`n... tb_role" />
+            <marker date="1548659812146" expanded="true" signature="1121:1269" ph="SELECT id,`n... tb_role" />
+            <marker date="1548659812146" expanded="true" signature="1184:1241" ph="SELECT role_... tb_user_role" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/mapper/RoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.0.RC3/spring-cloud-netflix-zuul-2.1.0.RC3-sources.jar!/org/springframework/cloud/netflix/zuul/filters/ZuulProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.0.RC3/spring-cloud-netflix-zuul-2.1.0.RC3-sources.jar!/org/springframework/cloud/netflix/zuul/filters/ProxyRequestHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="89" column="50" lean-forward="false" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.0.RC3/spring-cloud-netflix-zuul-2.1.0.RC3-sources.jar!/org/springframework/cloud/netflix/zuul/filters/route/RibbonRoutingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="129" column="33" lean-forward="true" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-zuul/src/main/java/xifu/com/filter/AuthFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="56" column="43" lean-forward="true" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/EnterpriseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="87" column="27" lean-forward="true" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="68" column="65" lean-forward="false" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/EnterpriseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1334">
+          <caret line="77" column="9" lean-forward="false" selection-start-line="74" selection-start-column="7" selection-end-line="77" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="100" column="37" lean-forward="true" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.4.3/elasticsearch-6.4.3-sources.jar!/org/elasticsearch/index/query/AbstractQueryBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="123" column="21" lean-forward="false" selection-start-line="123" selection-start-column="15" selection-end-line="123" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.4.3/elasticsearch-6.4.3-sources.jar!/org/elasticsearch/search/aggregations/AggregationBuilders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="353" column="0" lean-forward="true" selection-start-line="353" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.4.3/elasticsearch-6.4.3-sources.jar!/org/elasticsearch/search/aggregations/AggregationBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="65" column="71" lean-forward="false" selection-start-line="65" selection-start-column="64" selection-end-line="65" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.3.RELEASE/spring-web-5.1.3.RELEASE-sources.jar!/org/springframework/http/ResponseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1776">
+          <caret line="519" column="42" lean-forward="false" selection-start-line="519" selection-start-column="37" selection-end-line="519" selection-end-column="42" />
+          <folding>
+            <element signature="e#7062#7063#0" expanded="false" />
+            <element signature="e#7097#7098#0" expanded="false" />
+            <element signature="e#13090#13091#0" expanded="false" />
+            <element signature="e#13127#13128#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.3.RELEASE/spring-webmvc-5.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3794">
+          <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.3.RELEASE/spring-webmvc-5.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="43" column="20" lean-forward="true" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.3.RELEASE/spring-data-commons-2.1.3.RELEASE.jar!/org/springframework/data/web/config/SpringDataWebConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1564">
+          <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/config/MyWebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3419">
+          <caret line="308" column="23" lean-forward="false" selection-start-line="308" selection-start-column="23" selection-end-line="308" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ThreadLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="220" column="23" lean-forward="false" selection-start-line="220" selection-start-column="23" selection-end-line="220" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/intercepters/UserAuthInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1357">
+          <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1217#1218#0" expanded="false" />
+            <element signature="e#1280#1281#0" expanded="false" />
+            <element signature="e#2951#2952#0" expanded="false" />
+            <element signature="e#2992#2993#0" expanded="false" />
+            <element signature="e#3190#3191#0" expanded="false" />
+            <element signature="e#3248#3249#0" expanded="false" />
+            <element signature="e#3458#3459#0" expanded="false" />
+            <element signature="e#3518#3519#0" expanded="false" />
+            <element signature="e#3575#3576#0" expanded="false" />
+            <element signature="e#3619#3620#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-hystrix/2.1.0.RC3/spring-cloud-netflix-hystrix-2.1.0.RC3.jar!/org/springframework/cloud/netflix/hystrix/HystrixProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/hystrix/hystrix-core/1.5.18/hystrix-core-1.5.18.jar!/com/netflix/hystrix/strategy/properties/HystrixPropertiesCollapserDefault.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="12" column="96" lean-forward="true" selection-start-line="12" selection-start-column="96" selection-end-line="12" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-hystrix/2.1.0.RC3/spring-cloud-netflix-hystrix-2.1.0.RC3-sources.jar!/org/springframework/cloud/netflix/hystrix/HystrixProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="37" column="63" lean-forward="false" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-hystrix/2.1.0.RC3/spring-cloud-netflix-hystrix-2.1.0.RC3-sources.jar!/org/springframework/cloud/netflix/hystrix/HystrixMetricsProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="45" />
+          <folding>
+            <element signature="e#1229#1230#0" expanded="false" />
+            <element signature="e#1258#1259#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-zuul/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/pojo/DomainInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-dev/xifu-dev-db-service/src/main/java/xifu/com/service/DbService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="144" column="23" lean-forward="false" selection-start-line="144" selection-start-column="23" selection-end-line="144" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-dev/xifu-dev-interface/src/main/java/xifu/com/pojo/Inverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/pojo/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/RoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1388">
+          <caret line="38" column="80" lean-forward="false" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="66" column="57" lean-forward="false" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-common/src/main/java/xifu/com/vo/PageRequestInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/RoleAuthDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3336">
+          <caret line="182" column="64" lean-forward="true" selection-start-line="182" selection-start-column="64" selection-end-line="182" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/UserRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-common/src/main/java/xifu/com/vo/PageInfoResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/RoleRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/mapper/StationInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="25" column="47" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/resources/mapper/StationInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="79" column="32" lean-forward="true" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+          <folding>
+            <marker date="1548830756559" expanded="true" signature="2677:3097" ph="SELECT S.* F... tb_station_info" />
+            <marker date="1548830756559" expanded="true" signature="2865:3079" ph="SELECT id FR... tb_domain_info" />
+            <marker date="1548830756559" expanded="true" signature="2991:3058" ph="SELECT CONCA... tb_domain_info" />
+            <marker date="1548830756559" expanded="true" signature="4116:4182" ph="SELECT stati... tb_user_station" />
+            <marker date="1548830756559" expanded="true" signature="4275:4479" ph="SELECT id FR... tb_domain_info" />
+            <marker date="1548830756559" expanded="true" signature="4394:4461" ph="SELECT CONCA... tb_domain_info" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-common/src/main/java/xifu/com/exception/ExceptionEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/StationInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/DomainInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="106" column="63" lean-forward="false" selection-start-line="106" selection-start-column="63" selection-end-line="106" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/TreeDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/service/DomainInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="153" column="46" lean-forward="false" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/dto/StationRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-service/src/main/java/xifu/com/controller/StationInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="33" column="48" lean-forward="true" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xifu-user/xifu-user-interface/src/main/java/xifu/com/pojo/StationInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>xifu-parent</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

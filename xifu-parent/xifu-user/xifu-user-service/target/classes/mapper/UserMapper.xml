@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xifu.com.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="xifu.com.pojo.User">
+        <result column="id" property="id"/>
+        <result column="login_name" property="loginName"/>
+        <result column="password" property="password"/>
+        <result column="salt" property="salt"/>
+        <result column="nice_name" property="niceName"/>
+        <result column="gender" property="gender"/>
+        <result column="phone" property="phone"/>
+        <result column="status" property="status"/>
+        <result column="user_type" property="userType"/>
+        <result column="enterprise_id" property="enterpriseId"/>
+        <result column="email" property="email"/>
+        <result column="qq" property="qq"/>
+        <result column="create_user_id" property="createUserId"/>
+        <result column="create_date" jdbcType="TIMESTAMP" property="createDate"/>
+        <result column="modify_user_id" property="modifyUserId"/>
+        <result column="modify_date" jdbcType="TIMESTAMP" property="modifyDate"/>
+        <result column="enterprise_name" property="enterpriseName"/>
+    </resultMap>
+    <!-- 查询登录用户管理的用户信息 -->
+    <select id="findEnterpriseUsers" parameterType="xifu.com.dto.UserRequest" resultMap="BaseResultMap">
+        SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id
+        <where>
+            AND U.enterprise_id = #{enterpriseId}
+            <if test="loginName != null and loginName != ''">
+                <bind name="loginName" value="'%' + _parameter.loginName + '%'" />
+                AND U.login_name LIKE #{loginName}
+            </if>
+            <if test="phone != null and phone != ''">
+                <bind name="phone" value="'%' + _parameter.phone + '%'" />
+                AND U.phone LIKE #{phone}
+            </if>
+        </where>
+    </select>
+
+    <!-- 超级管理员查询用户信息 -->
+    <select id="findAllUsers" parameterType="xifu.com.dto.UserRequest" resultMap="BaseResultMap">
+        SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id
+        <where>
+            <if test="loginName != null and loginName != ''">
+                <bind name="loginName" value="'%' + _parameter.loginName + '%'" />
+                AND U.login_name LIKE #{loginName}
+            </if>
+            <if test="phone != null and phone != ''">
+                <bind name="phone" value="'%' + _parameter.phone + '%'" />
+                AND U.phone LIKE #{phone}
+            </if>
+        </where>
+    </select>
+    <!-- 根据用户名称查询对应的角色名称 -->
+    <select id="findUserRoleNameByUserIds" parameterType="java.util.List" resultType="java.util.Map">
+        SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id
+        WHERE ur.user_id in
+        <foreach open="(" close=")" collection="list" item="t" index="index" separator=",">
+            #{t}
+        </foreach>
+    </select>
+    <!-- 新增用户和企业的关系 -->
+    <insert id="insertUserToRoles">
+        INSERT INTO tb_user_role(user_id, role_id) VALUES
+        <foreach collection="roleIdList" item="t" index="index" separator=",">
+            (#{userId}, #{t})
+        </foreach>
+    </insert>
+    <select id="findUserRoleIdByUserId" resultType="java.lang.Long">
+        SELECT role_id FROM tb_user_role WHERE user_id = #{value}
+    </select>
+</mapper>

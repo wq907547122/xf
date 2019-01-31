@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xifu-common/xifu-common.iml" filepath="$PROJECT_DIR$/xifu-common/xifu-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-dev/xifu-dev.iml" filepath="$PROJECT_DIR$/xifu-dev/xifu-dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-dev/xifu-dev-alarm-service/xifu-dev-alarm-service.iml" filepath="$PROJECT_DIR$/xifu-dev/xifu-dev-alarm-service/xifu-dev-alarm-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-dev/xifu-dev-analysis-alarm-service/xifu-dev-analysis-alarm-service.iml" filepath="$PROJECT_DIR$/xifu-dev/xifu-dev-analysis-alarm-service/xifu-dev-analysis-alarm-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-dev/xifu-dev-db-service/xifu-dev-db-service.iml" filepath="$PROJECT_DIR$/xifu-dev/xifu-dev-db-service/xifu-dev-db-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-dev/xifu-dev-interface/xifu-dev-interface.iml" filepath="$PROJECT_DIR$/xifu-dev/xifu-dev-interface/xifu-dev-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-dev/xifu-dev-network-service/xifu-dev-network-service.iml" filepath="$PROJECT_DIR$/xifu-dev/xifu-dev-network-service/xifu-dev-network-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-dev/xifu-dev-service/xifu-dev-service.iml" filepath="$PROJECT_DIR$/xifu-dev/xifu-dev-service/xifu-dev-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-filemanage/xifu-filemanage.iml" filepath="$PROJECT_DIR$/xifu-filemanage/xifu-filemanage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-parent.iml" filepath="$PROJECT_DIR$/xifu-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-register/xifu-register.iml" filepath="$PROJECT_DIR$/xifu-register/xifu-register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-user/xifu-user.iml" filepath="$PROJECT_DIR$/xifu-user/xifu-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-user/xifu-user-interface/xifu-user-interface.iml" filepath="$PROJECT_DIR$/xifu-user/xifu-user-interface/xifu-user-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-user/xifu-user-service/xifu-user-service.iml" filepath="$PROJECT_DIR$/xifu-user/xifu-user-service/xifu-user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xifu-zuul/xifu-zuul.iml" filepath="$PROJECT_DIR$/xifu-zuul/xifu-zuul.iml" />
+    </modules>
+  </component>
+</project>

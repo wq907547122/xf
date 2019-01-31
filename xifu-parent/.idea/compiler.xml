@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="xifu-common" />
+        <module name="xifu-dev-alarm-service" />
+        <module name="xifu-dev-analysis-alarm-service" />
+        <module name="xifu-dev-db-service" />
+        <module name="xifu-dev-interface" />
+        <module name="xifu-dev-network-service" />
+        <module name="xifu-dev-service" />
+        <module name="xifu-filemanage" />
+        <module name="xifu-register" />
+        <module name="xifu-user-interface" />
+        <module name="xifu-user-service" />
+        <module name="xifu-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xifu-common" target="1.8" />
+      <module name="xifu-dev" target="1.8" />
+      <module name="xifu-dev-alarm-service" target="1.8" />
+      <module name="xifu-dev-analysis-alarm-service" target="1.8" />
+      <module name="xifu-dev-db-service" target="1.8" />
+      <module name="xifu-dev-interface" target="1.8" />
+      <module name="xifu-dev-network-service" target="1.8" />
+      <module name="xifu-dev-service" target="1.8" />
+      <module name="xifu-filemanage" target="1.8" />
+      <module name="xifu-parent" target="1.8" />
+      <module name="xifu-register" target="1.8" />
+      <module name="xifu-user" target="1.8" />
+      <module name="xifu-user-interface" target="1.8" />
+      <module name="xifu-user-service" target="1.8" />
+      <module name="xifu-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
