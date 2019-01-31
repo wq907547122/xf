@@ -1,0 +1,78 @@
+微服务的架构
+1：注册中心(eureka)： 
+xifu-register  端口号 7001
+
+2: zuul路由
+xifu-zuul 端口号：8001
+路由的路径：
+
+
+前端请求--> nginx(分发网关:可以集群) --> zuul(分发到对应的处理) -> 真正的处理服务(服务可以集群)
+nginx配置搭建集群的网关方式如下
+ upstream  backServer{
+        server 127.0.0.1:81;
+        server 127.0.0.1:82;
+    }
+    
+    server {
+        listen       80;
+        server_name  qinfeng.zheng.com;
+
+        location / {
+            ### 指定上游服务器负载均衡服务器
+            proxy_pass http://backServer/;
+            index  index.html index.htm;
+        }
+    }	
+
+	
+	
+3：用户的模块
+xifu-user  端口号：8002
+
+需要考虑对外提供的接口
+包括用户信息（权限）、企业信息、电站信息等
+
+4: kpi模块
+xifu-kpi 端口号 8003
+对于占位的url: xxx/xxx/{xx}/{xx}
+如 /user/check/{data}/{type}的url
+在前面添加一个前缀。统一前缀为/user/check/ph/1{data}/2{type}
+
+
+
+5.设备的模块
+5.1)基本设备信息
+xifu-dev-service 端口号: 8020
+包括设备基本信息(点表导入、归一化、信号点模板、告警模板等等)
+
+5.2)设备连接模块、后面看考虑是否将各种接入的形式分开、如104、modbus、sn、mqtt等单独布置一个服务，可以都统一使用这个，在里面去区分
+xifu-dev-network-service:8021
+// 由于性能数据和kpi数据是数据量很大，这里将性能数据和告警也单独使用两个服务
+包括各种类型设备的连接、实时数据入elasticsearch、告警数据入elasticsearch、智能告警分析等等
+5.3) 性能数据
+xifu-dev-db-service 端口号：8022
+这里就采取不使用关系型数据库，直接使用elasticsearch保存数据
+5.4) 告警信息
+xifu-dev-alarm-service 端口号：8023
+这里就采取不使用关系型数据库，直接使用elasticsearch保存数据
+5.5) 智能告警(分析告警)
+xifu-dev-analysis-alarm-service: 8024
+这里就采取不使用关系型数据库，直接使用elasticsearch保存数据
+
+6.文件系统模块 
+xifu-filemanage 端口号：8004
+drop table if exists tb_file_info;
+CREATE TABLE `tb_file_info` (
+  `file_id` varchar(32) NOT NULL COMMENT '文件id',
+  `file_name` varchar(255) NOT NULL COMMENT '文件名称',
+  `file_ext` varchar(500) DEFAULT NULL COMMENT '文件后缀',
+  `file_mime` varchar(500) DEFAULT NULL COMMENT '文件类型',
+  `original_name` varchar(500) DEFAULT NULL COMMENT '文件类型',
+  PRIMARY KEY (`file_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 comment '保存文件保存位置信息';
+
+
+
+
+前端服务的模块搭建ok
