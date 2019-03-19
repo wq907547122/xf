@@ -1,10 +1,14 @@
 微服务的架构
+所有微服务的包名的父包都为：xifu.com
+并且服务的XxxxApplication.java都是在这个包下创建
+
 1：注册中心(eureka)： 
 xifu-register  端口号 7001
 
 2: zuul路由
 xifu-zuul 端口号：8001
 路由的路径：
+xifu-gateway 端口号 8200
 
 
 前端请求--> nginx(分发网关:可以集群) --> zuul(分发到对应的处理) -> 真正的处理服务(服务可以集群)
@@ -28,7 +32,11 @@ nginx配置搭建集群的网关方式如下
 	
 	
 3：用户的模块
-xifu-user  端口号：8002
+xifu-user  端口号：8300
+ 权限模块
+ xifu-auth 父工程
+ xifu-auth-interface 提供基本接口和api
+ xifu-auth-service 端口号 8100
 
 需要考虑对外提供的接口
 包括用户信息（权限）、企业信息、电站信息等
@@ -43,25 +51,28 @@ xifu-kpi 端口号 8003
 
 5.设备的模块
 5.1)基本设备信息
-xifu-dev-service 端口号: 8020
+xifu-dev-interface
+xifu-dev-service 端口号: 8500
 包括设备基本信息(点表导入、归一化、信号点模板、告警模板等等)
 
+
 5.2)设备连接模块、后面看考虑是否将各种接入的形式分开、如104、modbus、sn、mqtt等单独布置一个服务，可以都统一使用这个，在里面去区分
-xifu-dev-network-service:8021
+xifu-dev-network-service:8510
 // 由于性能数据和kpi数据是数据量很大，这里将性能数据和告警也单独使用两个服务
 包括各种类型设备的连接、实时数据入elasticsearch、告警数据入elasticsearch、智能告警分析等等
 5.3) 性能数据
-xifu-dev-db-service 端口号：8022
+xifu-dev-db-service 端口号：8520
 这里就采取不使用关系型数据库，直接使用elasticsearch保存数据
 5.4) 告警信息
-xifu-dev-alarm-service 端口号：8023
+xifu-dev-alarm-service 端口号：8530
 这里就采取不使用关系型数据库，直接使用elasticsearch保存数据
 5.5) 智能告警(分析告警)
-xifu-dev-analysis-alarm-service: 8024
+xifu-dev-analysis-alarm-service: 8540
 这里就采取不使用关系型数据库，直接使用elasticsearch保存数据
 
+
 6.文件系统模块 
-xifu-filemanage 端口号：8004
+xifu-filemanage 端口号：8400
 drop table if exists tb_file_info;
 CREATE TABLE `tb_file_info` (
   `file_id` varchar(32) NOT NULL COMMENT '文件id',
@@ -72,7 +83,23 @@ CREATE TABLE `tb_file_info` (
   PRIMARY KEY (`file_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 comment '保存文件保存位置信息';
 
+7.用户登录系统的微服务
+使用jwt生产公钥和私钥的方式先参考博客
+https://www.jianshu.com/p/6aae8f038017
+xifu-auth 端口号：8005
+
+
+
 
 
 
 前端服务的模块搭建ok
+
+
+
+
+linux运行微服务的代码：
+java -jar xifu-filemanage-1.0-SNAPSHOT.jar --eurekaServiceUrl=http://192.168.2.19:7001/eureka/ --spring.datasource.password=system@123
+java -jar xifu-user-service-1.0-SNAPSHOT.jar --eurekaServiceUrl=http://192.168.2.19:7001/eureka/ --spring.datasource.password=system@123 --spring.redis.host=192.168.2.19
+java -jar xifu-auth-service-1.0-SNAPSHOT.jar --eurekaServiceUrl=http://192.168.2.19:7001/eureka/ --spring.redis.host=192.168.2.19
+java -jar xifu-gateway-1.0-SNAPSHOT.jar --eurekaServiceUrl=http://192.168.2.19:7001/eureka/ --spring.redis.host=192.168.2.19
