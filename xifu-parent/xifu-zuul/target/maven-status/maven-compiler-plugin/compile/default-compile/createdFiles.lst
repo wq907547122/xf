@@ -1,0 +1,4 @@
+xifu\com\config\GateWayCorsConfig.class
+xifu\com\config\WhiteInfos.class
+xifu\com\filter\AuthFilter.class
+xifu\com\ZuulAuthApplication.class

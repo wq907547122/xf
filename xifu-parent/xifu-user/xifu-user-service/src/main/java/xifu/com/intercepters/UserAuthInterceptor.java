@@ -30,7 +30,7 @@ public class UserAuthInterceptor implements HandlerInterceptor {
      * 不用登录的白名单
      */
     private static final List<String> NO_INTERSEPTOR_LIST = Arrays.asList(
-            "/login", "/logout", "/check/ph/"
+            "/login", "/logout", "/check/ph/", "/queryUser", "/queryUser2", "/list", "/upload"
     );
     // 私有构造方法
     private UserAuthInterceptor (UserAuthBuilder builder) {

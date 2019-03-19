@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xifu.com.mapper.RoleMapper">
+    <!-- 新增角色与权限之间的关系表 -->
+    <insert id="saveRoleAuthInfos" parameterType="java.util.List">
+        insert into tb_role_auth
+        (role_id, auth_id)
+        values
+        <foreach collection="list" item="t" index="index" separator=",">
+            (
+              #{t.roleId}, #{t.authId}
+            )
+        </foreach>
+    </insert>
+    <!-- 根据角色id获取所有的权限的集合 -->
+    <select id="findAuthIdsByRoleId" resultType="java.lang.Long">
+        SELECT auth_id FROM tb_role_auth WHERE role_id = #{value}
+    </select>
+    <!-- 根据角色id删除角色与权限的关系表 -->
+    <delete id="deleteRoleAuthByRoleId">
+        DELETE FROM tb_role_auth WHERE role_id = #{value}
+    </delete>
+    <!-- 根据角色id查询当前的角色绑定了多少个用户 -->
+    <select id="countBindUserByRoleId" resultType="java.lang.Integer">
+        SELECT COUNT(user_id) FROM tb_user_role WHERE role_id = #{value}
+    </select>
+    <!-- 查询用户下所有启用的用户 -->
+    <select id="findRoleByUserId">
+        SELECT id,`name`,description FROM tb_role
+        WHERE id IN (SELECT role_id FROM tb_user_role WHERE user_id = #{value})
+        AND `status` = '0'
+    </select>
+</mapper>

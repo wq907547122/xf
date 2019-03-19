@@ -1,0 +1,4 @@
+xifu\com\AuthApplication.class
+xifu\com\client\UserClient.class
+xifu\com\controller\AuthController.class
+xifu\com\service\AuthService.class

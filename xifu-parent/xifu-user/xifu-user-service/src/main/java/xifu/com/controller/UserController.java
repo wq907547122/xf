@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import xifu.com.dto.UserRequest;
 import xifu.com.intercepters.UserAuthInterceptor;
 import xifu.com.pojo.User;
@@ -66,6 +67,7 @@ public class UserController {
     @GetMapping("page")
     public ResponseEntity<PageInfoResult<User>> findPage(UserRequest user){
         AuthUserInfo loginInfo = UserAuthInterceptor.getLoginUser();
+        log.info("user info= {}", loginInfo);
         user.setUserId(loginInfo.getId());
         user.setUserType(loginInfo.getUserType());
         user.setEnterpriseId(loginInfo.getEnterpriseId());
@@ -86,6 +88,21 @@ public class UserController {
     public ResponseEntity<String> login(User user){
         // 登录
         return ResponseEntity.ok(userService.login(user.getLoginName(), user.getPassword()));
+    }
+
+    /**
+     * 查询用户
+     * @param username
+     * @param password
+     * @return
+     */
+    @GetMapping("queryUser")
+    public ResponseEntity<AuthUserInfo> queryUser(@RequestParam("username") String username, @RequestParam("password") String password) {
+        return ResponseEntity.ok(userService.queryUser(username, password));
+    }
+    @PostMapping("queryUser2")
+    public ResponseEntity<AuthUserInfo> queryUser2(@RequestBody User user) {
+        return ResponseEntity.ok(userService.queryUser(user.getLoginName(), user.getPassword()));
     }
 
     /**
@@ -159,6 +176,17 @@ public class UserController {
     @DeleteMapping("ph/{id}")
     public ResponseEntity<Void> deleteUserById(@PathVariable("id") Long id) {
         this.userService.deleteUserById(id);
+        return ResponseEntity.ok().build();
+    }
+
+    /**
+     * 解析上传excel的测试
+     * @param file
+     * @return
+     */
+    @PostMapping("upload")
+    public ResponseEntity<Void> uploadExcel(@RequestParam("file") MultipartFile file) {
+        this.userService.uploadExcel(file);
         return ResponseEntity.ok().build();
     }
 }

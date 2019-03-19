@@ -22,6 +22,15 @@ import i18n from './i18n'
 import store from './store'
 import VueLazyload from 'vue-lazyload'
 import { directive as Clickaway } from 'vue-clickaway'
+import ECharts from 'vue-echarts/components/ECharts'
+// 手动引入 ECharts 各模块来减小打包体积
+import 'echarts/lib/chart/bar'
+import 'echarts/lib/chart/pie'
+import 'echarts/lib/component/tooltip'
+import 'echarts/lib/component/polar'
+import 'echarts/lib/component/legend'
+import 'echarts/lib/component/title.js'
+Vue.component('v-chart', ECharts)
 // 扩展Object对象和Date对象的方法
 require('@/utils/prototype.js')
 

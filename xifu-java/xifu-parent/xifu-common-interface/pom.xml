@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>xifu-parent</artifactId>
+        <groupId>xifu.com</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>xifu.com.service</groupId>
+    <artifactId>xifu-common-interface</artifactId>
+    <description>提供一下统一的spring相关的工具或者接口信息</description>
+    <dependencies>
+        <dependency>
+            <!-- 引入基本的工具对象等信息 -->
+            <groupId>xifu.com.service</groupId>
+            <artifactId>xifu-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+
+</project>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-auth/xifu-auth-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-auth/xifu-auth-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-common-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-dev" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-dev/xifu-dev-alarm-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-dev/xifu-dev-analysis-alarm-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-dev/xifu-dev-db-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-dev/xifu-dev-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-dev/xifu-dev-network-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-dev/xifu-dev-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-filemanager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-register" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-user/xifu-user-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xifu-user/xifu-user-service" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

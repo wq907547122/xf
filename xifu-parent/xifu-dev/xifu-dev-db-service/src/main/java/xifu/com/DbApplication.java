@@ -12,7 +12,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  **/
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableScheduling
+@EnableScheduling // 可以执行任务
 public class DbApplication {
     public static void main(String[] args) {
         SpringApplication.run(DbApplication.class);

@@ -2,7 +2,7 @@ package xifu.com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
@@ -10,7 +10,7 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @auth wq on 2019/1/18 17:56
  **/
 @SpringBootApplication
-@EnableEurekaClient
+@EnableDiscoveryClient
 @MapperScan("xifu.com.file.mapper")
 public class FileManageApplication {
     public static void main(String[] args) {

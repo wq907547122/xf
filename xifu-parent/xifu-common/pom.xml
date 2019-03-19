@@ -12,5 +12,10 @@
     <groupId>xifu.com.service</groupId>
     <artifactId>xifu-common</artifactId>
     <!-- 公共的对象信息，如pojo、utils等等 -->
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
 </project>

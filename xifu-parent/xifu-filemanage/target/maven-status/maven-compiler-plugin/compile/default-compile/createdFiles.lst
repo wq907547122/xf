@@ -1,0 +1,6 @@
+xifu\com\file\pojo\FileInfo.class
+xifu\com\file\controller\FileManagerController.class
+xifu\com\FileManageApplication.class
+xifu\com\file\service\FileInfoService.class
+xifu\com\file\mapper\FileInfoMapper.class
+xifu\com\file\config\FileInfoProp.class

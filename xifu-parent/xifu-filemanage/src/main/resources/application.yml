@@ -12,6 +12,11 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     connectionProperties: druid.stat.mergeSql=true
 
+# 注册到eureka中
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eurekaServiceUrl:http://127.0.0.1:7001/eureka/}
 xifu:
   file:
     windowPath: D:/fileManager/xifu # windows的存储路径

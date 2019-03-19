@@ -1,0 +1,38 @@
+server:
+  port: ${port:8300}
+spring:
+  application:
+    name: xifu-user
+  #数据源配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/user_database?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    connectionProperties: druid.stat.mergeSql=true
+  jackson: # 空值不返回
+    default-property-inclusion: non_null
+  redis: # 配置redis的连接密码
+    password: 123456
+# 注册到eureka中
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eurekaServiceUrl:http://127.0.0.1:7001/eureka/}
+# 打印对应的包下的日志
+logging:
+  level:
+    xifu.com: debug
+    org: info
+    com: info
+  path: D:/xifu/logs
+  file: D:/xifu/logs/myException.log
+# mybatis配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml # 配置扫描对应mapper的xml文件的路径
+
+xifu:
+  jwt:
+    pubKeyPath: D:/jwt/rsa/rsa.pub # 公钥的文件地址. 后面给其他的地方解密的，不会给私钥，只给公钥
+

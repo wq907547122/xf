@@ -1,0 +1,9 @@
+xifu\com\pojo\Auth.class
+xifu\com\pojo\DomainInfo.class
+xifu\com\vo\AuthUserInfo.class
+xifu\com\pojo\StationInfo.class
+xifu\com\pojo\User.class
+xifu\com\api\UserApi.class
+xifu\com\pojo\Enterprise.class
+xifu\com\pojo\RoleResourceInfo.class
+xifu\com\pojo\Role.class

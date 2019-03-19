@@ -98,7 +98,7 @@ export default {
     }
   },
   filters: {
-    dateFomart (val, fmt) { // 日期的格式化
+    dateFomart (val, fmt = 'yyyy-MM-dd HH:mm:ss') { // 日期的格式化
       if (!val) {
         return ''
       }

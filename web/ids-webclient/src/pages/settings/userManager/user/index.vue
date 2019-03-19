@@ -14,6 +14,7 @@
           </el-form-item>
         </el-form>
         <el-button @click="createUser()" type="primary" style="float: right;margin-right: 12px;">新增</el-button>
+        <el-button @click="exportUsers()" type="primary" style="float: right;margin-right: 12px;">导出</el-button>
       </div>
       <!-- 表格栏 -->
       <el-table :data="list" border style="width: 100%;" :maxHeight="tableContentHeight">
@@ -147,6 +148,9 @@ export default {
           this.$message.error('删除失败,服务异常')
         })
       })
+    },
+    exportUsers () { // 导入用户
+      window.open('api/user/upload', '_self')
     }
   },
   watch: {},

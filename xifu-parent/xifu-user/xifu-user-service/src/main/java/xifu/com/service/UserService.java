@@ -8,6 +8,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
+import org.springframework.web.multipart.MultipartFile;
 import xifu.com.constant.RedisConstants;
 import xifu.com.dto.UserRequest;
 import xifu.com.exception.ExceptionEnum;
@@ -17,6 +18,7 @@ import xifu.com.mapper.RoleResourceMapper;
 import xifu.com.mapper.UserMapper;
 import xifu.com.pojo.User;
 import xifu.com.utils.CodecUtil;
+import xifu.com.utils.ExcelUtil;
 import xifu.com.utils.JsonUtils;
 import xifu.com.utils.XifuRandomUtils;
 import xifu.com.vo.AuthUserInfo;
@@ -76,6 +78,21 @@ public class UserService {
      * @return 返回存储的tokenId信息
      */
     public String login(String name, String password) {
+        AuthUserInfo saveInfo = getAuthUserInfo(name, password);
+        String useJson = JsonUtils.toJson(saveInfo); // 转换为字符串
+        String tokenId = XifuRandomUtils.getUUIDString(); // 获取uuid的字符串
+        String key = RedisConstants.PREFIX_LOGIN_USER_TOKEN + tokenId;
+        redisTemplate.opsForValue().set(key, useJson, RedisConstants.TOKEN_EXPIRED, TimeUnit.MILLISECONDS);
+        return tokenId;
+    }
+
+    /**
+     * 获取用户信息
+     * @param name
+     * @param password
+     * @return
+     */
+    private AuthUserInfo getAuthUserInfo(String name, String password) {
         if(StringUtils.isBlank(name)) { // 验证用户名是否为空
             throw new XiFuException(ExceptionEnum.USER_NAME_EMPTY);
         }
@@ -116,11 +133,7 @@ public class UserService {
                 saveInfo.setResourceIds(resourceByAuthIds);
             }
         }
-        String useJson = JsonUtils.toJson(saveInfo); // 转换为字符串
-        String tokenId = XifuRandomUtils.getUUIDString(); // 获取uuid的字符串
-        String key = RedisConstants.PREFIX_LOGIN_USER_TOKEN + tokenId;
-        redisTemplate.opsForValue().set(key, useJson, RedisConstants.TOKEN_EXPIRED, TimeUnit.MILLISECONDS);
-        return tokenId;
+        return saveInfo;
     }
 
 
@@ -308,5 +321,35 @@ public class UserService {
         // 3.删除用户与角色的关系
         this.userMapper.deleteUserRole(id);
         // TODO 4.删除对应的绑定的电站关系
+    }
+
+    /**
+     * 获取用户的信息
+     * @param username
+     * @param password
+     * @return
+     */
+    public AuthUserInfo queryUser(String username, String password) {
+        return this.getAuthUserInfo(username, password);
+    }
+
+    /**
+     * 解析excel
+     * @param file
+     */
+    public void uploadExcel(MultipartFile file) {
+        ExcelUtil excelUtil = null;
+        try {
+            excelUtil = new ExcelUtil(file);
+            List<List<String>> userList = excelUtil.read(0, 1); // 读取第一个sheet页
+            for(List<String> u : userList) {
+                String collect = u.stream().collect(Collectors.joining(",")); // 转换为以逗号隔开的数据
+                log.info("row -->{}" , collect);
+            }
+            excelUtil.close(); // 关闭流
+        } catch (Exception e) {
+            log.error("parse excel failed:", e);
+            throw new XiFuException(ExceptionEnum.INVALID_ROLE_PARAM);
+        }
     }
 }

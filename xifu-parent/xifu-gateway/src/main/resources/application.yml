@@ -1,0 +1,44 @@
+server:
+  port: ${port:8006}
+spring:
+  application:
+    name: xifu-gateway
+  cloud:
+    gateway:
+      discovery:
+              locator:
+                enabled: true
+      routes: # 配置对应的请求路由信息
+      - id: xifu-user
+        uri: lb://xifu-user
+        predicates:
+        - Path=/user/**
+        filters:
+        - StripPrefix=1 # 表示去掉一个前缀即去掉/api/user ==> http://serviceId/**
+      - id: xifu-auth
+        uri: lb://xifu-auth
+        predicates:
+        - Path=/auth/**
+        filters:
+        - StripPrefix=1 # 表示去掉一个前缀即去掉/api/auth ==> http://serviceId/**
+      - id: xifu-db
+        uri: lb://xifu-db
+        predicates:
+        - Path=/db/**
+        filters:
+        - StripPrefix=1
+      - id: xifu-filemanage
+        uri: lb://xifu-filemanage
+        predicates:
+        - Path=/fileManager/**
+        filters:
+        #- StripPrefix=1 # 表示去掉两个前缀即去掉/user ==> http://serviceId/**
+        - name: RequestSize
+          args:
+            maxSize: 5000000
+#      httpclient: # 连接超时时间
+#        connect-timeout: 10
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eurekaServiceUrl:http://127.0.0.1:7001/eureka/}

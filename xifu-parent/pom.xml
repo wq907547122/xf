@@ -13,8 +13,9 @@
         <module>xifu-common</module>
         <module>xifu-user</module>
         <module>xifu-dev</module>
-        <module>xifu-dev</module>
         <module>xifu-filemanage</module>
+        <module>xifu-auth</module>
+        <module>xifu-gateway</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -32,11 +33,6 @@
     </properties>
     <!-- 所有的子包都会有的jar包 -->
     <dependencies>
-        <!--spring boot-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <!-- 避免过多的getter/setter等方法 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -52,6 +48,12 @@
     <!-- 子包在需要的时候引入的jar包 -->
     <dependencyManagement>
         <dependencies>
+            <!--spring boot-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>2.1.1.RELEASE</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -80,7 +82,7 @@
             <dependency>
                 <groupId>tk.mybatis</groupId>
                 <artifactId>mapper-spring-boot-starter</artifactId>
-                <version>RELEASE</version>
+                <version>2.1.5</version>
             </dependency>
             <dependency>
                 <groupId>mysql</groupId>
@@ -106,14 +108,14 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <build>
+    <!--<build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
     <!-- 指定下载spring cloud的路径 -->
     <repositories>
         <repository>

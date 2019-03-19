@@ -1,0 +1,10 @@
+xifu\com\utils\MD5Utils.class
+xifu\com\utils\XifuRandomUtils.class
+xifu\com\constant\RedisConstants.class
+xifu\com\advice\GlobalExceptionHandler.class
+xifu\com\exception\ExceptionEnum.class
+xifu\com\exception\XiFuException.class
+xifu\com\utils\JsonUtils.class
+xifu\com\vo\ExceptionResult.class
+xifu\com\vo\PageInfoResult.class
+xifu\com\vo\PageRequestInfo.class

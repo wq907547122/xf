@@ -1,0 +1,21 @@
+server:
+  port: ${port:8520}
+spring:
+  application:
+    name: xifu-dev-db
+  data:
+    elasticsearch:
+      cluster-name: xifu-db-elasticsearch # 默认为elasticsearch,这里可以修改
+      cluster-nodes: 127.0.0.1:9300
+      properties:
+        path:
+          logs: ./elasticsearch/log # elasticsearch日志存储目录
+          data: ./elasticsearch/data # elasticsearch数据存储目录
+  jackson:
+      default-property-inclusion: non_null # 空值不返回
+
+# 注册到eureka中
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eurekaServiceUrl:http://127.0.0.1:7001/eureka/}

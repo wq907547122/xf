@@ -1,0 +1,7 @@
+xifu\com\vo\SearchPageResult.class
+xifu\com\scheduleds\ScheduledService.class
+xifu\com\service\DbService.class
+xifu\com\controller\DbController.class
+xifu\com\es\InverterRepository.class
+xifu\com\config\AsyncConfig.class
+xifu\com\DbApplication.class

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>xifu-parent</artifactId>
+        <groupId>xifu.com</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>xifu.com.service</groupId>
+    <artifactId>xifu-dev</artifactId>
+    <packaging>pom</packaging>
+    <description>设备管理模块的微服务的父类</description>
+    <modules>
+        <module>xifu-dev-service</module>
+        <module>xifu-dev-network-service</module>
+        <module>xifu-dev-db-service</module>
+        <module>xifu-dev-alarm-service</module>
+        <module>xifu-dev-interface</module>
+        <module>xifu-dev-analysis-alarm-service</module>
+    </modules>
+
+
+</project>

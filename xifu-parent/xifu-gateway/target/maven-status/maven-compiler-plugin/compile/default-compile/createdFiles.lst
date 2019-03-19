@@ -1,0 +1,3 @@
+xifu\com\config\CorsConfig.class
+xifu\com\filters\MyAuthGloadFilter.class
+xifu\com\GatewayApplication.class

@@ -18,19 +18,23 @@ xifu:
     whiteList: # 请求的白名单的集合
       - /user/login
       - /user/logout
+      - /user/queryUser
     blackList: # 请求的黑名单
       - /user/page
 
 zuul:
   #strip-prefix: true # 去掉前缀
   routes:
-    user:
-      path: /user/** # 拦截的路径
-      #url: http://localhost:8081
-      serviceId: xifu-user
-    db:
+#    user:
+#      path: /user/** # 拦截的路径
+#      #url: http://localhost:8081
+#      serviceId: xifu-user
+    db: #实时数据和缓存数据的微服务
       path: /db/**
       serviceId: xifu-dev-db
+#    auth: #权限认证的微服务
+#      path: /auth/**
+#      serviceId: xifu-auth
 hystrix:
   command:
     default:
