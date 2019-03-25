@@ -61,6 +61,32 @@
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
         </dependency>
+        <!-- 处理excel的poi依赖包 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+        </dependency>
+        <!-- 引入用户模块的信息，查询电站等信息的api -->
+        <dependency>
+            <groupId>xifu.com.service</groupId>
+            <artifactId>xifu-user-interface</artifactId>
+            <version>${project.version}</version>
+            <exclusions>
+                <!-- 需要排除掉重复引入的jar包 -->
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>xifu.com.service</groupId>
+                    <artifactId>xifu-common</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 
     <properties>

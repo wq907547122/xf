@@ -32,6 +32,13 @@ spring:
             maxSize: 5000000
 #      httpclient: # 连接超时时间
 #        connect-timeout: 10
+      # 设备服务模块的请求服务
+      - id: xifu-dev-service
+        uri: lb://xifu-dev-service
+        predicates:
+        - Path=/dev/**
+        filters:
+        - StripPrefix=1
 eureka:
   client:
     serviceUrl:

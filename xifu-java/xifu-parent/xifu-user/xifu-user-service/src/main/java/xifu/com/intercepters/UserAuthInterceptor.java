@@ -48,8 +48,11 @@ public class UserAuthInterceptor implements HandlerInterceptor {
         }
         String token = request.getHeader(RedisConstants.REQUEST_TOKEN_ID);
         if (StringUtils.isBlank(token)) { // 如果获取的用户信息是空的
-            log.error("请求未登录，请求路径：{}", servletPath);
-            throw new XiFuException(ExceptionEnum.NO_AUTH);
+            token = request.getParameter(RedisConstants.REQUEST_TOKEN_ID);
+            if (StringUtils.isBlank(token)) {
+                log.error("请求未登录，请求路径：{}", servletPath);
+                throw new XiFuException(ExceptionEnum.NO_AUTH);
+            }
         }
         try {
             UserInfo infoFromToken = JwtUtils.getInfoFromToken(token, prop.getPublicKey());

@@ -12,12 +12,6 @@
     <groupId>xifu.com.service</groupId>
     <artifactId>xifu-common</artifactId>
     <description>公共的java对象，帮助工具等等</description>
-    <dependencies>
-        <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>persistence-api</artifactId>
-        </dependency>
-    </dependencies>
 
 
 </project>

@@ -134,4 +134,30 @@ public class StationInfoService {
         }
         return stationInfo;
     }
+
+    /**
+     * 根据电站名称查询电站
+     * @param stationName 查询的电站名称，不是模糊是等于
+     * @return
+     */
+    public StationInfo getStationByStationName(String stationName) {
+        if (StringUtils.isBlank(stationName)) {
+            log.error("[电站查询] 电站名称为空");
+            throw new XiFuException(ExceptionEnum.STATION_NOT_FOUND);
+        }
+        StationInfo search = new StationInfo();
+        search.setStationName(stationName);
+        search.setIsMonitor(false); // 不是监控传递上来的电站
+        search.setIsDelete(false); // 电站没有被删除
+        List<StationInfo> select = this.stationInfoMapper.select(search);
+        if (CollectionUtils.isEmpty(select)) {
+            log.error("[电站查询] 查询不到电站信息，电站名称:{}", stationName);
+            throw new XiFuException(ExceptionEnum.STATION_NOT_FOUND);
+        }
+        if (select.size() > 1) {
+            log.error("[电站查询] 查询到多个电站，电站名称：{}", stationName);
+            throw new XiFuException(ExceptionEnum.STATION_FOUND_MULT);
+        }
+        return select.get(0);
+    }
 }

@@ -36,14 +36,18 @@ public class MyAuthGloadFilter implements GlobalFilter, Ordered {
         log.info("tokenId = {}", tokenId);
 //        String token = request.getQueryParams().getFirst("token");
         if (StringUtils.isBlank(tokenId)) { // 如果没有tokenId，返回没有权限的页面
-            log.info( "token is empty..." );
+            tokenId = request.getQueryParams().getFirst("tokenId");
+            if (StringUtils.isBlank(tokenId)) { // 如果请求参数也没有，就直接不允许
+                log.info( "token is empty..." );
 //            byte[] bytes = "{\"status\":\"401\",\"msg\":\"无操作权限\"}".getBytes(StandardCharsets.UTF_8);
-            byte[] bytes = "{\"status\":\"401\",\"msg\":\"NO_AUTH\"}".getBytes(); // 返回json格式的无权限的结果
-            DataBuffer wrap = exchange.getResponse().bufferFactory().wrap(bytes);
-            return exchange.getResponse().writeWith(Flux.just(wrap));
-            // TODO 鉴权不成功的就直接返回没有权限的页面
+                byte[] bytes = "{\"status\":\"401\",\"msg\":\"NO_AUTH\"}".getBytes(); // 返回json格式的无权限的结果
+                DataBuffer wrap = exchange.getResponse().bufferFactory().wrap(bytes);
+                return exchange.getResponse().writeWith(Flux.just(wrap));
+                // TODO 鉴权不成功的就直接返回没有权限的页面
 //            exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
 //            return exchange.getResponse().setComplete();
+            }
+
         }
         // TODO 判断用户是否可以请求这个资源
         return chain.filter(exchange);

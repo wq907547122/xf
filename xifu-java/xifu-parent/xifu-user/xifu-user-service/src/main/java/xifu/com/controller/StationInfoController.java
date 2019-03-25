@@ -94,4 +94,14 @@ public class StationInfoController {
     public ResponseEntity<StationInfo> getStationById(@PathVariable("id") Long id) {
         return ResponseEntity.ok(this.stationInfoService.getStationById(id));
     }
+
+    /**
+     * 根据电站名称获取电站信息
+     * @param stationName 电站名称
+     * @return
+     */
+    @GetMapping("find/ph/{stationName}")
+    public ResponseEntity<StationInfo> getStationByName(@PathVariable("stationName") String stationName){
+        return ResponseEntity.ok(this.stationInfoService.getStationByStationName(stationName));
+    }
 }

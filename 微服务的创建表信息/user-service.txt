@@ -219,8 +219,8 @@ CREATE TABLE `tb_dev_info` (
   `dev_alias` varchar(64) DEFAULT '' COMMENT '设备别名',
   `station_code` varchar(64) DEFAULT NULL COMMENT '电站编码',
   `enterprise_id` bigint(16) DEFAULT NULL COMMENT '企业编码',
-  `model_version_id` bigint(16) DEFAULT '' COMMENT '设备的版本模型的id',
-  `model_version_name` varchar(32) DEFAULT '' COMMENT '点表版本，唯一标识',
+  `model_version_id` bigint(16) DEFAULT NULL COMMENT '设备的版本模型的id',
+  `model_version_code` varchar(64) DEFAULT '' COMMENT '点表版本，唯一标识',
   `parent_model_version_id` bigint(16) DEFAULT NULL COMMENT '主设备信号版本id',
   `dev_type_id` int(8) DEFAULT NULL COMMENT '设备类型id',
   `parent_id` bigint(16) DEFAULT NULL COMMENT '父设备id，针对通管机下挂类型',
@@ -294,19 +294,19 @@ drop table if exists tb_dev_signal;
 CREATE TABLE `tb_dev_signal` (
   `id` bigint(16) NOT NULL AUTO_INCREMENT COMMENT '信号点唯一id，全库唯一',
   `dev_id` bigint(16) DEFAULT NULL COMMENT '设备id',
-  `signal_name` varchar(32) NOT NULL COMMENT '信号实例名称',
-  `signal_alias` varchar(32) DEFAULT '' COMMENT '信号别名',
+  `signal_name` varchar(64) NOT NULL COMMENT '信号实例名称',
+  `signal_alias` varchar(64) DEFAULT '' COMMENT '信号别名',
   `signal_unit` varchar(32) DEFAULT NULL COMMENT '单位',
   `register_type` int(8) DEFAULT NULL COMMENT '寄存器类型',
   `bit` int(8) DEFAULT NULL COMMENT 'bit位',
   `model_version_code` varchar(64) DEFAULT '' COMMENT '点表版本',
   `signal_group` int(8) DEFAULT '0' COMMENT '主信号地址，103的groupid',
   `signal_address` int(8) NOT NULL DEFAULT '0' COMMENT '信号点地址',
-  `register_num` smallint(4) DEFAULT '0' COMMENT 'modbus协议的寄存器个数',
+  `register_num` smallint(2) DEFAULT '0' COMMENT 'modbus协议的寄存器个数',
   `gain` decimal(10,6) DEFAULT NULL COMMENT '增益',
   `offset` decimal(12,6) DEFAULT NULL COMMENT '偏移量',
   `signal_type` int(8) DEFAULT NULL COMMENT '1：遥测；2：单点遥信；3：双点遥信；4：单点遥控；5：双点遥控,6：遥脉；7：遥调；8：事件；9：告警； 15：线圈；16：离散输入；17：保持寄存器；18：输入寄存器',
-  `model_id` bigint(16) DEFAULT NULL COMMENT '模型点表的id',
+  `model_id` bigint(16) DEFAULT NULL COMMENT '模型点表的id,对应版本的信号点的id',
   `data_type` int(8) DEFAULT NULL COMMENT '1：无符号整数；2：有符号整数；3：浮点数；4：字符串；5：时间',
   `is_alarm_flag` tinyint(1) DEFAULT '0' COMMENT '1表示该信号点为遥测告警标志位， 0表示否',
   `is_alarm_val` tinyint(1) DEFAULT '0' COMMENT '1表示该信号点为遥测告警有效值，0表示否',
@@ -314,7 +314,7 @@ CREATE TABLE `tb_dev_signal` (
   `create_date` datetime DEFAULT NULL COMMENT '创建日期',
   `modified_date` datetime DEFAULT NULL COMMENT '修改日期',
   PRIMARY KEY (`id`),
-  KEY `idx_ids_south_signal_key` (`device_id`,`signal_address`)
+  KEY `idx_ids_south_signal_key` (`dev_id`,`signal_address`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='点表实例表';
 
 -- 设备告警模型
@@ -328,11 +328,11 @@ CREATE TABLE `tb_dev_alarm_model` (
   `model_id` bigint(11) DEFAULT NULL COMMENT '信号点模型id',
   `cause_id` int(11) DEFAULT NULL COMMENT '原因id:来源于点表',
   `dev_type_id` smallint(6) DEFAULT NULL COMMENT '设备类型id',
-  `severity_id` tinyint(4) NOT NULL COMMENT '告警级别',
+  `severity_id` smallint(2) NOT NULL COMMENT '告警级别 1:严重 2：一般 3：提示',
   `metro_unit` varchar(32) DEFAULT NULL COMMENT '计量单位:要求使用英文规范的计量单位信息',
   `alarm_name` varchar(128) DEFAULT NULL COMMENT '告警名称',
   `alarm_sub_name` varchar(128) DEFAULT NULL,
-  `sig_address` bigint(16) DEFAULT NULL COMMENT '信号地址：信号地址是和具体设备相关的某一个信号的存取地址，一般的规范，比如104，modbus等都有这个概念',
+  `sig_address` int(8) DEFAULT NULL COMMENT '信号地址：信号地址是和具体设备相关的某一个信号的存取地址，一般的规范，比如104，modbus等都有这个概念',
   `bit_index` tinyint(4) DEFAULT NULL COMMENT '信号bit位位置：有的信号会占据某一个寄存器的一个位，这个时候需要用到该信息。确定一个信号到底是取一个bit位还是取几个寄存器，需要根据信号的数据类型来确定',
   `alarm_cause` varchar(2000) DEFAULT NULL,
   `repair_suggestion` varchar(2000) DEFAULT NULL COMMENT '修复建议',
@@ -345,7 +345,7 @@ CREATE TABLE `tb_dev_alarm_model` (
   `update_user_id` bigint(16) DEFAULT NULL COMMENT '更新用户',
   `update_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后更新时间',
   PRIMARY KEY (`id`),
-  KEY `idx_ids_alarm_model` (`enterprise_id`,`signal_version`,`alarm_id`,`cause_id`)
+  KEY `idx_ids_alarm_model` (`enterprise_id`,`model_version_code`,`alarm_id`,`cause_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- 各个设备类型的归一化模型
@@ -361,7 +361,7 @@ CREATE TABLE `tb_dev_normalized_model` (
   `create_date` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `modified_date` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=247 DEFAULT CHARSET=utf8 COMMENT='归一化信号点配置表';
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='归一化信号点配置表';
 
 -- 设备类型表信息
 drop table if exists tb_dev_normalized_model;
@@ -369,9 +369,10 @@ CREATE TABLE `tb_dev_normalized_model` (
 	`id` bigint(19) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
 	`name` varchar(64) DEFAULT NULL COMMENT '设备类型的名称',
 	`description` varchar(256) DEFAULT NULL COMMENT '对列的说明和描述',
-	PRIMARY KEY (`id`),
+	PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 -- 对版本配置的归一化信息
+drop table if exists tb_dev_normalized_info;
 CREATE TABLE `tb_dev_normalized_info` (
   `id` bigint(19) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `signal_id` int(19) DEFAULT NULL COMMENT '设备的信号点的id',
@@ -382,6 +383,6 @@ CREATE TABLE `tb_dev_normalized_info` (
   `create_date` datetime DEFAULT NULL COMMENT '创建日期',
   `modified_date` datetime DEFAULT NULL COMMENT '修改日期',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 COMMENT='信号点模型适配表';
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='信号点模型适配表';
 
 

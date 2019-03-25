@@ -63,13 +63,13 @@ axios.interceptors.request.use(function (config) {
 axios.interceptors.response.use(data => {
   return data
 }, err => {
-  if (err.response.status === 401) { // 这个是没有权限的返回内容
+  if (err.response.status === 401 || err.response.status === '401') { // 这个是没有权限的返回内容
     Element.Message.error('用户无权限')
     sessionStorage.removeItem('token-id')
     router.push('/login')
     return
   }
-  if (err.response.status === 504) { // 超时
+  if (err.response.status === 504 || err.response.status === '504') { // 超时
     err.response.data.message = '请求超时，请稍后重试...'
   }
   return Promise.reject(err.response.data) // 请求状态码不是成功的时候，封装数据只返回抛出的异常信息

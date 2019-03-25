@@ -19,6 +19,7 @@ public enum ExceptionEnum {
     EDITOR_USER_FAILED(400, "修改用户失败"),
     ENTERPRISE_NOT_FOUND(404, "企业不存在"),
     STATION_NOT_FOUND(404, "电站不存在"),
+    STATION_FOUND_MULT(500, "存在多个电站"),
     CREATE_STATION_ERROR(400, "创建电站失败"),
     EDIT_STATION_ERROR(400, "修改电站失败"),
     DOMAIN_NOT_FOUND(404, "区域不存在"),
@@ -30,6 +31,7 @@ public enum ExceptionEnum {
     ADD_ENTERPRISE_FAILED(400, "新增企业失败"),
     FILE_TOO_LARGE(400, "文件过大"),
     FILE_UPLOAD_FAILED(400, "文件上传失败"),
+    POINT_IMPORT_PARSE_ERROR(500, "点表解析错误")
     ;
     private int code;
     private String msg;

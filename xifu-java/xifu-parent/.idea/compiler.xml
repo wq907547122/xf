@@ -29,6 +29,7 @@
       <module name="xifu-auth-service" target="1.8" />
       <module name="xifu-common" target="1.8" />
       <module name="xifu-common-interface" target="1.8" />
+      <module name="xifu-common-util" target="1.8" />
       <module name="xifu-dev" target="1.8" />
       <module name="xifu-dev-alarm-service" target="1.8" />
       <module name="xifu-dev-analysis-alarm-service" target="1.8" />

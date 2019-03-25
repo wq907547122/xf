@@ -1,0 +1,1491 @@
+09:34:32.127 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3bdd3e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09:34:32.699 [main] INFO  xifu.com.UserApplication - No active profile set, falling back to default profiles: default
+09:34:33.914 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[xifu.com]' package. Please check your configuration.
+09:34:34.048 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+09:34:34.050 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+09:34:34.113 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39ms. Found 0 repository interfaces.
+09:34:34.460 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e7798e91-9c30-3ae4-b864-d2a5cb049a40
+09:34:34.588 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e7a3d0e6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09:34:34.654 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3bdd3e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09:34:35.070 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8300 (http)
+09:34:35.093 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8300"]
+09:34:35.103 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:34:35.104 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+09:34:35.111 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;E:\oracle\product\11.2.0\client;E:\oracle\product\11.2.0\dbhome_1\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;D:\Program Files\Java\jdk1.8.0_181\bin;D:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\apache-maven-3.3.9\bin;C:\Program Files\nodejs\;C:\Program Files\TortoiseSVN\bin;C:\WINDOWS\System32\OpenSSH\;D:\Program Files\TortoiseGit\bin;C:\Users\yaokun\AppData\Local\Microsoft\WindowsApps;C:\Users\yaokun\AppData\Roaming\npm;;.]
+09:34:35.418 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:34:35.418 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2700 ms
+09:34:37.205 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+09:34:37.206 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:34:37.212 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+09:34:37.212 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+09:34:37.457 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+09:34:37.595 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+09:34:37.596 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+09:34:37.597 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+09:34:37.597 [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+09:34:38.910 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+09:34:38.953 [main] INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+09:34:39.368 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+09:34:39.368 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+09:34:39.508 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+09:34:39.508 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+09:34:39.759 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+09:34:40.001 [main] INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+09:34:40.002 [main] INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+09:34:40.002 [main] INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+09:34:40.002 [main] INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+09:34:40.002 [main] INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+09:34:40.002 [main] INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+09:34:40.002 [main] INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+09:34:40.229 [main] INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+09:34:40.233 [main] INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+09:34:40.236 [main] INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09:34:40.241 [main] INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1553132080239 with initial instances count: 1
+09:34:40.242 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application XIFU-USER with eureka with status UP
+09:34:40.243 [main] INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1553132080243, current=UP, previous=STARTING]
+09:34:40.245 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_XIFU-USER/DESKTOP-17HNTEV.mshome.net:xifu-user:8300: registering service...
+09:34:40.261 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8300"]
+09:34:40.303 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8300 (http) with context path ''
+09:34:40.305 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8300
+09:34:40.307 [main] INFO  xifu.com.UserApplication - Started UserApplication in 9.6 seconds (JVM running for 11.94)
+09:34:40.309 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_XIFU-USER/DESKTOP-17HNTEV.mshome.net:xifu-user:8300 - registration status: 204
+09:39:40.006 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+09:40:29.877 [http-nio-8300-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:40:29.878 [http-nio-8300-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:40:29.938 [http-nio-8300-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 60 ms
+09:40:30.295 [http-nio-8300-exec-1] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+09:40:31.252 [http-nio-8300-exec-1] DEBUG xifu.com.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,login_name,password,salt,nice_name,phone,email,gender,status,user_type,enterprise_id,qq,create_user_id,create_date,modify_user_id,modify_date FROM tb_user WHERE login_name = ? 
+09:40:31.252 [http-nio-8300-exec-2] DEBUG xifu.com.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,login_name,password,salt,nice_name,phone,email,gender,status,user_type,enterprise_id,qq,create_user_id,create_date,modify_user_id,modify_date FROM tb_user WHERE login_name = ? 
+09:40:31.275 [http-nio-8300-exec-1] DEBUG xifu.com.mapper.UserMapper.selectOne - ==> Parameters: admin(String)
+09:40:31.275 [http-nio-8300-exec-2] DEBUG xifu.com.mapper.UserMapper.selectOne - ==> Parameters: admin(String)
+09:40:31.540 [http-nio-8300-exec-1] DEBUG xifu.com.mapper.UserMapper.selectOne - <==      Total: 1
+09:40:31.540 [http-nio-8300-exec-2] DEBUG xifu.com.mapper.UserMapper.selectOne - <==      Total: 1
+09:40:31.593 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.getRoleIds - ==>  Preparing: select role_id from tb_user_role where user_id = ? 
+09:40:31.593 [http-nio-8300-exec-2] DEBUG x.com.mapper.UserMapper.getRoleIds - ==>  Preparing: select role_id from tb_user_role where user_id = ? 
+09:40:31.593 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.getRoleIds - ==> Parameters: 1(Long)
+09:40:31.593 [http-nio-8300-exec-2] DEBUG x.com.mapper.UserMapper.getRoleIds - ==> Parameters: 1(Long)
+09:40:31.616 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.getRoleIds - <==      Total: 1
+09:40:31.616 [http-nio-8300-exec-2] DEBUG x.com.mapper.UserMapper.getRoleIds - <==      Total: 1
+09:40:31.623 [http-nio-8300-exec-2] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==>  Preparing: SELECT DISTINCT auth_id FROM tb_role_auth WHERE role_id IN ( ? ) 
+09:40:31.623 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==>  Preparing: SELECT DISTINCT auth_id FROM tb_role_auth WHERE role_id IN ( ? ) 
+09:40:31.623 [http-nio-8300-exec-2] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==> Parameters: 1(Long)
+09:40:31.623 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==> Parameters: 1(Long)
+09:40:31.644 [http-nio-8300-exec-2] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - <==      Total: 0
+09:40:31.644 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - <==      Total: 0
+09:40:33.036 [http-nio-8300-exec-3] DEBUG xifu.com.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,login_name,password,salt,nice_name,phone,email,gender,status,user_type,enterprise_id,qq,create_user_id,create_date,modify_user_id,modify_date FROM tb_user WHERE login_name = ? 
+09:40:33.037 [http-nio-8300-exec-3] DEBUG xifu.com.mapper.UserMapper.selectOne - ==> Parameters: admin(String)
+09:40:33.038 [http-nio-8300-exec-3] DEBUG xifu.com.mapper.UserMapper.selectOne - <==      Total: 1
+09:40:33.039 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.getRoleIds - ==>  Preparing: select role_id from tb_user_role where user_id = ? 
+09:40:33.039 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.getRoleIds - ==> Parameters: 1(Long)
+09:40:33.040 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.getRoleIds - <==      Total: 1
+09:40:33.041 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==>  Preparing: SELECT DISTINCT auth_id FROM tb_role_auth WHERE role_id IN ( ? ) 
+09:40:33.041 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==> Parameters: 1(Long)
+09:40:33.041 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - <==      Total: 0
+09:40:35.216 [http-nio-8300-exec-5] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+09:40:35.437 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+09:40:35.437 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+09:40:35.438 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+09:40:35.438 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+09:40:35.508 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+09:40:35.511 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+09:40:35.511 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+09:40:35.556 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+09:40:35.580 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+09:40:35.581 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+09:40:35.581 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+09:40:35.611 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+09:40:35.614 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+09:40:35.615 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+09:40:35.653 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+09:40:40.057 [http-nio-8300-exec-7] DEBUG x.c.m.E.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_enterprise 
+09:40:40.058 [http-nio-8300-exec-7] DEBUG x.c.m.E.selectByExample_COUNT - ==> Parameters: 
+09:40:40.059 [http-nio-8300-exec-7] DEBUG x.c.m.E.selectByExample_COUNT - <==      Total: 1
+09:40:40.060 [http-nio-8300-exec-7] DEBUG x.c.m.E.selectByExample - ==>  Preparing: SELECT id,name,description,parent_id,avatar_path,address,contact_people,contact_phone,email,device_limit,user_limit,create_user_id,create_date,modify_user_id,modify_date,longitude,latitude,radius,logo FROM tb_enterprise LIMIT ? 
+09:40:40.061 [http-nio-8300-exec-7] DEBUG x.c.m.E.selectByExample - ==> Parameters: 10(Integer)
+09:40:40.081 [http-nio-8300-exec-7] DEBUG x.c.m.E.selectByExample - <==      Total: 10
+09:44:40.013 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+09:49:40.028 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+09:50:50.668 [http-nio-8300-exec-10] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+09:50:50.701 [http-nio-8300-exec-10] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+09:50:50.701 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+09:50:50.705 [http-nio-8300-exec-10] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+09:50:50.706 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+09:50:50.711 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+09:50:50.711 [http-nio-8300-exec-10] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+09:50:50.713 [http-nio-8300-exec-10] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+09:50:50.713 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+09:50:50.713 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+09:50:50.713 [http-nio-8300-exec-10] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+09:50:50.716 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+09:50:50.722 [http-nio-8300-exec-10] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+09:50:50.724 [http-nio-8300-exec-10] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+09:50:50.726 [http-nio-8300-exec-10] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+09:50:50.729 [http-nio-8300-exec-10] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+09:54:40.031 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+09:59:40.032 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:02:04.505 [http-nio-8300-exec-4] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+10:02:04.569 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+10:02:04.569 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+10:02:04.571 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+10:02:04.571 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+10:02:04.575 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+10:02:04.575 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+10:02:04.577 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+10:02:04.577 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+10:02:04.577 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+10:02:04.577 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+10:02:04.581 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+10:02:04.582 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+10:02:04.582 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+10:02:04.583 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+10:02:04.585 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+10:02:52.296 [http-nio-8300-exec-6] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+10:02:52.297 [http-nio-8300-exec-6] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+10:02:52.298 [http-nio-8300-exec-6] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+10:02:52.298 [http-nio-8300-exec-6] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+10:02:52.299 [http-nio-8300-exec-6] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+10:02:52.300 [http-nio-8300-exec-7] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+10:02:52.301 [http-nio-8300-exec-6] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+10:02:52.302 [http-nio-8300-exec-7] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+10:02:52.302 [http-nio-8300-exec-7] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+10:02:52.304 [http-nio-8300-exec-7] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+10:02:52.305 [http-nio-8300-exec-7] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+10:02:52.305 [http-nio-8300-exec-7] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+10:02:52.308 [http-nio-8300-exec-7] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+10:02:52.334 [http-nio-8300-exec-7] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+10:02:52.335 [http-nio-8300-exec-7] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+10:02:52.361 [http-nio-8300-exec-7] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+10:04:23.001 [http-nio-8300-exec-10] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+10:04:23.011 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+10:04:23.011 [http-nio-8300-exec-10] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+10:04:23.013 [http-nio-8300-exec-10] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+10:04:23.013 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+10:04:23.017 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+10:04:23.018 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+10:04:23.019 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+10:04:23.022 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+10:04:23.028 [http-nio-8300-exec-10] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+10:04:23.029 [http-nio-8300-exec-10] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+10:04:23.029 [http-nio-8300-exec-10] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+10:04:23.032 [http-nio-8300-exec-10] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+10:04:23.033 [http-nio-8300-exec-10] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+10:04:23.034 [http-nio-8300-exec-10] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+10:04:23.036 [http-nio-8300-exec-10] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+10:04:40.038 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:08:46.625 [http-nio-8300-exec-4] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+10:08:46.629 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+10:08:46.629 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+10:08:46.629 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+10:08:46.633 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+10:08:46.634 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+10:08:46.634 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+10:08:46.637 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+10:08:46.654 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+10:08:46.656 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+10:08:46.656 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+10:08:46.657 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+10:08:46.663 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+10:08:46.664 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+10:08:46.664 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+10:08:46.674 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+10:09:40.041 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:09:44.476 [http-nio-8300-exec-6] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+10:09:44.478 [http-nio-8300-exec-6] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+10:09:44.540 [http-nio-8300-exec-6] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+10:14:40.042 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:15:15.904 [http-nio-8300-exec-10] ERROR x.c.intercepters.UserAuthInterceptor - 请求数据错误或者已经超时，请求路径：/page, 异常信息: {}
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2019-03-21T10:10:33Z. Current time: 2019-03-21T10:15:15Z, a difference of 282811 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at xifu.com.utils.JwtUtils.parserToken(JwtUtils.java:90)
+	at xifu.com.utils.JwtUtils.getInfoFromToken(JwtUtils.java:115)
+	at xifu.com.intercepters.UserAuthInterceptor.preHandle(UserAuthInterceptor.java:58)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1033)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+10:15:15.904 [http-nio-8300-exec-2] ERROR x.c.intercepters.UserAuthInterceptor - 请求数据错误或者已经超时，请求路径：/role/list, 异常信息: {}
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2019-03-21T10:10:33Z. Current time: 2019-03-21T10:15:15Z, a difference of 282806 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at xifu.com.utils.JwtUtils.parserToken(JwtUtils.java:90)
+	at xifu.com.utils.JwtUtils.getInfoFromToken(JwtUtils.java:115)
+	at xifu.com.intercepters.UserAuthInterceptor.preHandle(UserAuthInterceptor.java:58)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1033)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+10:15:31.113 [http-nio-8300-exec-1] DEBUG xifu.com.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,login_name,password,salt,nice_name,phone,email,gender,status,user_type,enterprise_id,qq,create_user_id,create_date,modify_user_id,modify_date FROM tb_user WHERE login_name = ? 
+10:15:31.116 [http-nio-8300-exec-1] DEBUG xifu.com.mapper.UserMapper.selectOne - ==> Parameters: admin(String)
+10:15:31.136 [http-nio-8300-exec-1] DEBUG xifu.com.mapper.UserMapper.selectOne - <==      Total: 1
+10:15:31.138 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.getRoleIds - ==>  Preparing: select role_id from tb_user_role where user_id = ? 
+10:15:31.138 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.getRoleIds - ==> Parameters: 1(Long)
+10:15:31.140 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.getRoleIds - <==      Total: 1
+10:15:31.141 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==>  Preparing: SELECT DISTINCT auth_id FROM tb_role_auth WHERE role_id IN ( ? ) 
+10:15:31.141 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==> Parameters: 1(Long)
+10:15:31.142 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - <==      Total: 0
+10:15:57.976 [http-nio-8300-exec-4] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+10:15:57.979 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+10:15:57.980 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+10:15:57.980 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+10:15:57.981 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+10:15:57.981 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+10:15:57.982 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+10:15:57.983 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+10:15:57.983 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+10:15:57.983 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+10:15:57.983 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+10:15:57.985 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+10:15:57.985 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+10:15:57.986 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+10:15:57.987 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+10:15:58.002 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+10:16:29.366 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_enterprise 
+10:16:29.371 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample_COUNT - ==> Parameters: 
+10:16:29.377 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample_COUNT - <==      Total: 1
+10:16:29.378 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample - ==>  Preparing: SELECT id,name,description,parent_id,avatar_path,address,contact_people,contact_phone,email,device_limit,user_limit,create_user_id,create_date,modify_user_id,modify_date,longitude,latitude,radius,logo FROM tb_enterprise LIMIT ? 
+10:16:29.379 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample - ==> Parameters: 10(Integer)
+10:16:29.389 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample - <==      Total: 10
+10:17:44.756 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+10:17:44.757 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+10:17:44.762 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+10:18:46.788 [http-nio-8300-exec-1] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+10:18:46.791 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+10:18:46.791 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+10:18:46.792 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+10:18:46.792 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+10:18:46.793 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+10:18:46.799 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+10:18:46.799 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+10:18:46.801 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+10:18:46.802 [http-nio-8300-exec-1] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+10:18:46.803 [http-nio-8300-exec-1] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+10:18:46.805 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+10:18:46.805 [http-nio-8300-exec-1] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+10:18:46.806 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+10:18:46.806 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+10:18:46.808 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+10:18:51.264 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+10:18:51.266 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+10:18:51.270 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+10:19:40.045 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:24:40.049 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:29:40.060 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:30:59.840 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+10:30:59.844 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+10:30:59.851 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+10:31:57.952 [http-nio-8300-exec-9] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+10:31:57.959 [http-nio-8300-exec-9] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+10:31:57.960 [http-nio-8300-exec-9] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+10:31:57.963 [http-nio-8300-exec-9] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+10:31:57.964 [http-nio-8300-exec-9] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+10:31:57.965 [http-nio-8300-exec-9] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+10:31:57.967 [http-nio-8300-exec-9] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+10:31:57.970 [http-nio-8300-exec-9] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+10:31:57.970 [http-nio-8300-exec-9] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+10:31:57.970 [http-nio-8300-exec-10] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+10:31:57.970 [http-nio-8300-exec-10] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+10:31:57.971 [http-nio-8300-exec-10] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+10:31:57.972 [http-nio-8300-exec-10] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+10:31:57.972 [http-nio-8300-exec-9] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+10:31:57.972 [http-nio-8300-exec-10] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+10:31:57.973 [http-nio-8300-exec-10] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+10:32:02.820 [http-nio-8300-exec-1] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+10:32:02.820 [http-nio-8300-exec-1] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+10:32:02.825 [http-nio-8300-exec-1] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+10:33:36.949 [http-nio-8300-exec-6] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+10:33:36.953 [http-nio-8300-exec-6] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+10:33:36.958 [http-nio-8300-exec-6] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+10:33:36.959 [http-nio-8300-exec-6] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+10:33:36.959 [http-nio-8300-exec-4] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+10:33:36.959 [http-nio-8300-exec-6] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+10:33:36.962 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+10:33:36.962 [http-nio-8300-exec-6] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+10:33:36.962 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+10:33:36.964 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+10:33:36.964 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+10:33:36.965 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+10:33:36.967 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+10:33:36.968 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+10:33:36.969 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+10:33:36.971 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+10:33:41.924 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+10:33:41.925 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+10:33:41.933 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+10:34:40.067 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:39:40.070 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:44:40.072 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:49:40.489 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:54:40.495 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:59:40.497 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+11:04:40.500 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+11:09:40.518 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+11:14:40.522 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+11:19:40.524 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+11:24:40.525 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+11:28:17.028 [http-nio-8300-exec-1] ERROR x.c.intercepters.UserAuthInterceptor - 请求数据错误或者已经超时，请求路径：/page, 异常信息: {}
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2019-03-21T10:45:31Z. Current time: 2019-03-21T11:28:17Z, a difference of 2566024 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at xifu.com.utils.JwtUtils.parserToken(JwtUtils.java:90)
+	at xifu.com.utils.JwtUtils.getInfoFromToken(JwtUtils.java:115)
+	at xifu.com.intercepters.UserAuthInterceptor.preHandle(UserAuthInterceptor.java:58)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1033)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+11:28:17.040 [http-nio-8300-exec-2] ERROR x.c.intercepters.UserAuthInterceptor - 请求数据错误或者已经超时，请求路径：/role/list, 异常信息: {}
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2019-03-21T10:45:31Z. Current time: 2019-03-21T11:28:17Z, a difference of 2566027 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at xifu.com.utils.JwtUtils.parserToken(JwtUtils.java:90)
+	at xifu.com.utils.JwtUtils.getInfoFromToken(JwtUtils.java:115)
+	at xifu.com.intercepters.UserAuthInterceptor.preHandle(UserAuthInterceptor.java:58)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1033)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+11:28:54.607 [http-nio-8300-exec-3] DEBUG xifu.com.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,login_name,password,salt,nice_name,phone,email,gender,status,user_type,enterprise_id,qq,create_user_id,create_date,modify_user_id,modify_date FROM tb_user WHERE login_name = ? 
+11:28:54.608 [http-nio-8300-exec-3] DEBUG xifu.com.mapper.UserMapper.selectOne - ==> Parameters: admin(String)
+11:28:54.615 [http-nio-8300-exec-3] DEBUG xifu.com.mapper.UserMapper.selectOne - <==      Total: 1
+11:28:54.616 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.getRoleIds - ==>  Preparing: select role_id from tb_user_role where user_id = ? 
+11:28:54.616 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.getRoleIds - ==> Parameters: 1(Long)
+11:28:54.623 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.getRoleIds - <==      Total: 1
+11:28:54.630 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==>  Preparing: SELECT DISTINCT auth_id FROM tb_role_auth WHERE role_id IN ( ? ) 
+11:28:54.630 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==> Parameters: 1(Long)
+11:28:54.632 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - <==      Total: 0
+11:28:55.045 [http-nio-8300-exec-6] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+11:28:55.049 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+11:28:55.049 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+11:28:55.051 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+11:28:55.055 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+11:28:55.055 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+11:28:55.057 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+11:28:55.076 [http-nio-8300-exec-6] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+11:28:55.077 [http-nio-8300-exec-6] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+11:28:55.086 [http-nio-8300-exec-6] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+11:28:55.087 [http-nio-8300-exec-6] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+11:28:55.087 [http-nio-8300-exec-6] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+11:28:55.088 [http-nio-8300-exec-6] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+11:28:55.089 [http-nio-8300-exec-6] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+11:28:55.090 [http-nio-8300-exec-6] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+11:28:55.094 [http-nio-8300-exec-6] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+11:28:58.079 [http-nio-8300-exec-4] DEBUG x.c.m.E.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_enterprise 
+11:28:58.079 [http-nio-8300-exec-4] DEBUG x.c.m.E.selectByExample_COUNT - ==> Parameters: 
+11:28:58.080 [http-nio-8300-exec-4] DEBUG x.c.m.E.selectByExample_COUNT - <==      Total: 1
+11:28:58.081 [http-nio-8300-exec-4] DEBUG x.c.m.E.selectByExample - ==>  Preparing: SELECT id,name,description,parent_id,avatar_path,address,contact_people,contact_phone,email,device_limit,user_limit,create_user_id,create_date,modify_user_id,modify_date,longitude,latitude,radius,logo FROM tb_enterprise LIMIT ? 
+11:28:58.081 [http-nio-8300-exec-4] DEBUG x.c.m.E.selectByExample - ==> Parameters: 10(Integer)
+11:28:58.084 [http-nio-8300-exec-4] DEBUG x.c.m.E.selectByExample - <==      Total: 10
+11:29:04.802 [http-nio-8300-exec-8] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+11:29:04.802 [http-nio-8300-exec-8] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+11:29:04.806 [http-nio-8300-exec-8] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+11:29:34.576 [http-nio-8300-exec-10] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+11:29:34.579 [http-nio-8300-exec-10] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+11:29:34.581 [http-nio-8300-exec-10] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+11:29:40.527 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+11:34:40.529 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+11:39:40.531 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+11:44:40.535 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+11:49:40.536 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+11:51:24.241 [http-nio-8300-exec-5] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+11:51:24.261 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+11:51:24.261 [http-nio-8300-exec-6] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+11:51:24.263 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+11:51:24.263 [http-nio-8300-exec-6] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+11:51:24.270 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+11:51:24.270 [http-nio-8300-exec-6] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+11:51:24.272 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+11:51:24.272 [http-nio-8300-exec-6] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+11:51:24.272 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+11:51:24.272 [http-nio-8300-exec-6] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+11:51:24.274 [http-nio-8300-exec-6] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+11:51:24.275 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+11:51:24.277 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+11:51:24.277 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+11:51:24.279 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+11:54:40.538 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+11:59:40.540 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:04:40.542 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:09:40.544 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:14:40.545 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:17:24.938 [http-nio-8300-exec-8] ERROR x.c.intercepters.UserAuthInterceptor - 请求数据错误或者已经超时，请求路径：/role/list, 异常信息: {}
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2019-03-21T11:58:54Z. Current time: 2019-03-21T12:17:24Z, a difference of 1110936 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at xifu.com.utils.JwtUtils.parserToken(JwtUtils.java:90)
+	at xifu.com.utils.JwtUtils.getInfoFromToken(JwtUtils.java:115)
+	at xifu.com.intercepters.UserAuthInterceptor.preHandle(UserAuthInterceptor.java:58)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1033)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:17:24.949 [http-nio-8300-exec-9] ERROR x.c.intercepters.UserAuthInterceptor - 请求数据错误或者已经超时，请求路径：/page, 异常信息: {}
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2019-03-21T11:58:54Z. Current time: 2019-03-21T12:17:24Z, a difference of 1110935 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at xifu.com.utils.JwtUtils.parserToken(JwtUtils.java:90)
+	at xifu.com.utils.JwtUtils.getInfoFromToken(JwtUtils.java:115)
+	at xifu.com.intercepters.UserAuthInterceptor.preHandle(UserAuthInterceptor.java:58)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1033)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+12:19:40.548 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:20:53.209 [http-nio-8300-exec-2] DEBUG xifu.com.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,login_name,password,salt,nice_name,phone,email,gender,status,user_type,enterprise_id,qq,create_user_id,create_date,modify_user_id,modify_date FROM tb_user WHERE login_name = ? 
+12:20:53.211 [http-nio-8300-exec-2] DEBUG xifu.com.mapper.UserMapper.selectOne - ==> Parameters: admin(String)
+12:20:53.216 [http-nio-8300-exec-2] DEBUG xifu.com.mapper.UserMapper.selectOne - <==      Total: 1
+12:20:53.218 [http-nio-8300-exec-2] DEBUG x.com.mapper.UserMapper.getRoleIds - ==>  Preparing: select role_id from tb_user_role where user_id = ? 
+12:20:53.219 [http-nio-8300-exec-2] DEBUG x.com.mapper.UserMapper.getRoleIds - ==> Parameters: 1(Long)
+12:20:53.220 [http-nio-8300-exec-2] DEBUG x.com.mapper.UserMapper.getRoleIds - <==      Total: 1
+12:20:53.221 [http-nio-8300-exec-2] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==>  Preparing: SELECT DISTINCT auth_id FROM tb_role_auth WHERE role_id IN ( ? ) 
+12:20:53.221 [http-nio-8300-exec-2] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==> Parameters: 1(Long)
+12:20:53.222 [http-nio-8300-exec-2] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - <==      Total: 0
+12:20:53.670 [http-nio-8300-exec-3] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+12:20:53.670 [http-nio-8300-exec-3] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+12:20:53.677 [http-nio-8300-exec-3] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+12:20:53.695 [http-nio-8300-exec-5] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+12:20:53.696 [http-nio-8300-exec-3] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+12:20:53.696 [http-nio-8300-exec-3] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+12:20:53.697 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+12:20:53.697 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+12:20:53.698 [http-nio-8300-exec-3] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+12:20:53.699 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+12:20:53.699 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+12:20:53.700 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+12:20:53.704 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+12:20:53.705 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+12:20:53.705 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+12:20:53.707 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+12:20:57.068 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_enterprise 
+12:20:57.069 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample_COUNT - ==> Parameters: 
+12:20:57.069 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample_COUNT - <==      Total: 1
+12:20:57.070 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample - ==>  Preparing: SELECT id,name,description,parent_id,avatar_path,address,contact_people,contact_phone,email,device_limit,user_limit,create_user_id,create_date,modify_user_id,modify_date,longitude,latitude,radius,logo FROM tb_enterprise LIMIT ? 
+12:20:57.070 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample - ==> Parameters: 10(Integer)
+12:20:57.073 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample - <==      Total: 10
+12:22:45.518 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:22:45.519 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:22:45.522 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:23:00.442 [http-nio-8300-exec-2] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+12:23:00.443 [http-nio-8300-exec-1] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+12:23:00.443 [http-nio-8300-exec-1] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+12:23:00.444 [http-nio-8300-exec-1] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+12:23:00.444 [http-nio-8300-exec-1] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+12:23:00.444 [http-nio-8300-exec-1] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+12:23:00.448 [http-nio-8300-exec-1] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+12:23:00.449 [http-nio-8300-exec-2] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+12:23:00.449 [http-nio-8300-exec-2] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+12:23:00.450 [http-nio-8300-exec-2] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+12:23:00.451 [http-nio-8300-exec-2] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+12:23:00.452 [http-nio-8300-exec-2] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+12:23:00.454 [http-nio-8300-exec-2] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+12:23:00.454 [http-nio-8300-exec-2] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+12:23:00.455 [http-nio-8300-exec-2] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+12:23:00.456 [http-nio-8300-exec-2] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+12:23:03.248 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:23:03.248 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:23:03.250 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:23:46.991 [http-nio-8300-exec-4] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+12:23:46.993 [http-nio-8300-exec-6] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+12:23:46.993 [http-nio-8300-exec-6] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+12:23:46.994 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+12:23:46.994 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+12:23:46.995 [http-nio-8300-exec-6] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+12:23:46.995 [http-nio-8300-exec-4] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+12:23:46.996 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+12:23:46.996 [http-nio-8300-exec-6] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+12:23:46.996 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+12:23:46.996 [http-nio-8300-exec-6] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+12:23:46.997 [http-nio-8300-exec-6] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+12:23:46.997 [http-nio-8300-exec-4] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+12:23:46.998 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+12:23:46.999 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+12:23:47.000 [http-nio-8300-exec-4] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+12:23:50.265 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:23:50.267 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:23:50.277 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:24:40.552 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:26:25.141 [http-nio-8300-exec-1] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+12:26:25.141 [http-nio-8300-exec-1] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+12:26:25.142 [http-nio-8300-exec-1] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+12:26:25.142 [http-nio-8300-exec-1] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+12:26:25.142 [http-nio-8300-exec-1] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+12:26:25.143 [http-nio-8300-exec-1] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+12:26:25.155 [http-nio-8300-exec-2] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+12:26:25.156 [http-nio-8300-exec-2] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+12:26:25.157 [http-nio-8300-exec-2] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+12:26:25.157 [http-nio-8300-exec-2] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+12:26:25.159 [http-nio-8300-exec-2] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+12:26:25.160 [http-nio-8300-exec-2] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+12:26:25.162 [http-nio-8300-exec-2] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+12:26:25.163 [http-nio-8300-exec-2] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+12:26:25.163 [http-nio-8300-exec-2] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+12:26:25.166 [http-nio-8300-exec-2] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+12:28:15.943 [http-nio-8300-exec-6] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+12:28:15.946 [http-nio-8300-exec-6] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+12:28:15.947 [http-nio-8300-exec-6] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+12:28:15.948 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+12:28:15.948 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+12:28:15.949 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+12:28:15.949 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+12:28:15.949 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+12:28:15.951 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+12:28:15.951 [http-nio-8300-exec-6] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+12:28:15.952 [http-nio-8300-exec-6] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+12:28:15.952 [http-nio-8300-exec-6] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+12:28:15.954 [http-nio-8300-exec-6] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+12:28:15.955 [http-nio-8300-exec-6] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+12:28:15.955 [http-nio-8300-exec-6] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+12:28:15.956 [http-nio-8300-exec-6] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+12:28:20.055 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:28:20.055 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:28:20.058 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:29:40.554 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:30:01.293 [http-nio-8300-exec-1] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:30:01.294 [http-nio-8300-exec-1] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:30:01.295 [http-nio-8300-exec-1] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:31:06.585 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:31:06.586 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:31:06.628 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:31:54.151 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:31:54.151 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:31:54.152 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:32:37.922 [http-nio-8300-exec-7] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+12:32:37.947 [http-nio-8300-exec-7] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+12:32:37.952 [http-nio-8300-exec-7] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+12:32:37.962 [http-nio-8300-exec-8] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+12:32:37.962 [http-nio-8300-exec-8] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+12:32:37.996 [http-nio-8300-exec-8] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+12:32:37.999 [http-nio-8300-exec-8] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+12:32:37.999 [http-nio-8300-exec-8] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+12:32:38.001 [http-nio-8300-exec-8] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+12:32:38.004 [http-nio-8300-exec-7] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+12:32:38.004 [http-nio-8300-exec-7] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+12:32:38.005 [http-nio-8300-exec-7] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+12:32:38.007 [http-nio-8300-exec-7] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+12:32:38.008 [http-nio-8300-exec-7] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+12:32:38.009 [http-nio-8300-exec-7] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+12:32:38.030 [http-nio-8300-exec-7] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+12:32:41.135 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:32:41.135 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:32:41.158 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:34:19.571 [http-nio-8300-exec-3] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+12:34:19.575 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+12:34:19.575 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+12:34:19.575 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+12:34:19.575 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+12:34:19.615 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+12:34:19.615 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+12:34:19.616 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+12:34:19.617 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+12:34:19.625 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+12:34:19.625 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+12:34:19.626 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+12:34:19.627 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+12:34:19.628 [http-nio-8300-exec-3] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+12:34:19.628 [http-nio-8300-exec-3] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+12:34:19.651 [http-nio-8300-exec-3] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+12:34:24.475 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:34:24.475 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:34:24.496 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:34:40.555 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:34:51.655 [http-nio-8300-exec-8] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+12:34:51.657 [http-nio-8300-exec-8] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+12:34:51.657 [http-nio-8300-exec-7] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+12:34:51.658 [http-nio-8300-exec-7] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+12:34:51.658 [http-nio-8300-exec-8] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+12:34:51.660 [http-nio-8300-exec-8] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+12:34:51.661 [http-nio-8300-exec-7] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+12:34:51.661 [http-nio-8300-exec-8] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+12:34:51.661 [http-nio-8300-exec-8] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+12:34:51.661 [http-nio-8300-exec-7] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+12:34:51.661 [http-nio-8300-exec-7] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+12:34:51.662 [http-nio-8300-exec-7] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+12:34:51.663 [http-nio-8300-exec-8] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+12:34:51.664 [http-nio-8300-exec-8] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+12:34:51.664 [http-nio-8300-exec-8] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+12:34:51.666 [http-nio-8300-exec-8] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+12:34:54.260 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:34:54.261 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:34:54.263 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:36:01.147 [http-nio-8300-exec-3] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+12:36:01.150 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+12:36:01.150 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+12:36:01.151 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+12:36:01.151 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+12:36:01.153 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+12:36:01.153 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+12:36:01.155 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+12:36:01.155 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+12:36:01.155 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+12:36:01.155 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+12:36:01.158 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+12:36:01.158 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+12:36:01.159 [http-nio-8300-exec-3] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+12:36:01.159 [http-nio-8300-exec-3] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+12:36:01.160 [http-nio-8300-exec-3] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+12:36:11.502 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:36:11.503 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:36:11.516 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:37:17.151 [http-nio-8300-exec-9] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+12:37:17.152 [http-nio-8300-exec-10] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+12:37:17.153 [http-nio-8300-exec-9] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+12:37:17.153 [http-nio-8300-exec-10] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+12:37:17.153 [http-nio-8300-exec-9] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+12:37:17.153 [http-nio-8300-exec-10] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+12:37:17.154 [http-nio-8300-exec-10] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+12:37:17.154 [http-nio-8300-exec-10] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+12:37:17.154 [http-nio-8300-exec-9] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+12:37:17.154 [http-nio-8300-exec-9] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+12:37:17.154 [http-nio-8300-exec-10] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+12:37:17.155 [http-nio-8300-exec-9] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+12:37:17.156 [http-nio-8300-exec-9] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+12:37:17.157 [http-nio-8300-exec-9] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+12:37:17.157 [http-nio-8300-exec-9] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+12:37:17.159 [http-nio-8300-exec-9] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+12:37:59.340 [http-nio-8300-exec-1] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+12:37:59.341 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+12:37:59.341 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+12:37:59.341 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+12:37:59.341 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+12:37:59.366 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+12:37:59.366 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+12:37:59.366 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+12:37:59.367 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+12:37:59.400 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+12:37:59.400 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+12:37:59.400 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+12:37:59.401 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+12:37:59.402 [http-nio-8300-exec-1] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+12:37:59.402 [http-nio-8300-exec-1] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+12:37:59.409 [http-nio-8300-exec-1] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+12:38:02.168 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:38:02.168 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:38:02.187 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:38:36.834 [http-nio-8300-exec-6] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+12:38:36.836 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+12:38:36.836 [http-nio-8300-exec-6] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+12:38:36.837 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+12:38:36.837 [http-nio-8300-exec-6] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+12:38:36.839 [http-nio-8300-exec-6] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+12:38:36.839 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+12:38:36.840 [http-nio-8300-exec-6] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+12:38:36.840 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+12:38:36.840 [http-nio-8300-exec-6] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+12:38:36.840 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+12:38:36.841 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+12:38:36.841 [http-nio-8300-exec-6] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+12:38:36.842 [http-nio-8300-exec-6] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+12:38:36.843 [http-nio-8300-exec-6] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+12:38:36.844 [http-nio-8300-exec-6] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+12:38:39.925 [http-nio-8300-exec-8] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+12:38:39.925 [http-nio-8300-exec-8] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+12:38:39.928 [http-nio-8300-exec-8] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+12:39:40.559 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:44:40.562 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:49:40.563 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:54:40.566 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+12:59:40.567 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:04:40.568 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:32:15.030 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:37:15.031 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:42:15.032 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:47:15.036 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:52:15.037 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+13:57:15.038 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:02:15.039 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:07:15.041 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:12:15.042 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:17:15.044 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:22:15.046 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:27:15.051 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:32:15.053 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:37:15.056 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:42:15.058 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:47:15.063 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:47:27.313 [http-nio-8300-exec-2] ERROR x.c.intercepters.UserAuthInterceptor - 请求数据错误或者已经超时，请求路径：/role/list, 异常信息: {}
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2019-03-21T12:50:53Z. Current time: 2019-03-21T14:47:27Z, a difference of 6994256 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at xifu.com.utils.JwtUtils.parserToken(JwtUtils.java:90)
+	at xifu.com.utils.JwtUtils.getInfoFromToken(JwtUtils.java:115)
+	at xifu.com.intercepters.UserAuthInterceptor.preHandle(UserAuthInterceptor.java:58)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1033)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+14:47:27.316 [http-nio-8300-exec-1] ERROR x.c.intercepters.UserAuthInterceptor - 请求数据错误或者已经超时，请求路径：/page, 异常信息: {}
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2019-03-21T12:50:53Z. Current time: 2019-03-21T14:47:27Z, a difference of 6994266 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at xifu.com.utils.JwtUtils.parserToken(JwtUtils.java:90)
+	at xifu.com.utils.JwtUtils.getInfoFromToken(JwtUtils.java:115)
+	at xifu.com.intercepters.UserAuthInterceptor.preHandle(UserAuthInterceptor.java:58)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1033)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+14:47:33.437 [http-nio-8300-exec-3] DEBUG xifu.com.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,login_name,password,salt,nice_name,phone,email,gender,status,user_type,enterprise_id,qq,create_user_id,create_date,modify_user_id,modify_date FROM tb_user WHERE login_name = ? 
+14:47:33.438 [http-nio-8300-exec-3] DEBUG xifu.com.mapper.UserMapper.selectOne - ==> Parameters: admin(String)
+14:47:33.455 [http-nio-8300-exec-3] DEBUG xifu.com.mapper.UserMapper.selectOne - <==      Total: 1
+14:47:33.468 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.getRoleIds - ==>  Preparing: select role_id from tb_user_role where user_id = ? 
+14:47:33.468 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.getRoleIds - ==> Parameters: 1(Long)
+14:47:33.472 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.getRoleIds - <==      Total: 1
+14:47:33.474 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==>  Preparing: SELECT DISTINCT auth_id FROM tb_role_auth WHERE role_id IN ( ? ) 
+14:47:33.475 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==> Parameters: 1(Long)
+14:47:33.490 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - <==      Total: 0
+14:47:33.792 [http-nio-8300-exec-5] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+14:47:33.796 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+14:47:33.797 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+14:47:33.801 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+14:47:33.802 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+14:47:33.802 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+14:47:33.805 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+14:47:33.805 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+14:47:33.806 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+14:47:33.808 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+14:47:33.811 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+14:47:33.811 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+14:47:33.812 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+14:47:33.812 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+14:47:33.815 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+14:47:33.842 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+14:47:37.278 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_enterprise 
+14:47:37.279 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample_COUNT - ==> Parameters: 
+14:47:37.289 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample_COUNT - <==      Total: 1
+14:47:37.289 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample - ==>  Preparing: SELECT id,name,description,parent_id,avatar_path,address,contact_people,contact_phone,email,device_limit,user_limit,create_user_id,create_date,modify_user_id,modify_date,longitude,latitude,radius,logo FROM tb_enterprise LIMIT ? 
+14:47:37.289 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample - ==> Parameters: 10(Integer)
+14:47:37.291 [http-nio-8300-exec-6] DEBUG x.c.m.E.selectByExample - <==      Total: 10
+14:47:46.220 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+14:47:46.220 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+14:47:46.238 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+14:50:53.097 [http-nio-8300-exec-1] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+14:50:53.139 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+14:50:53.139 [http-nio-8300-exec-3] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+14:50:53.140 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+14:50:53.140 [http-nio-8300-exec-3] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+14:50:53.146 [http-nio-8300-exec-3] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+14:50:53.147 [http-nio-8300-exec-3] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+14:50:53.148 [http-nio-8300-exec-3] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+14:50:53.150 [http-nio-8300-exec-3] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+14:50:53.152 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+14:50:53.152 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+14:50:53.153 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+14:50:53.154 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+14:50:53.162 [http-nio-8300-exec-1] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+14:50:53.163 [http-nio-8300-exec-1] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+14:50:53.165 [http-nio-8300-exec-1] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+14:50:59.419 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+14:50:59.420 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+14:50:59.427 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+14:52:15.067 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+14:57:15.070 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:02:15.074 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:07:15.075 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:12:15.077 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:17:15.079 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:22:15.080 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:27:15.081 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:32:15.083 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:37:15.087 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:40:02.718 [http-nio-8300-exec-10] ERROR x.c.intercepters.UserAuthInterceptor - 请求数据错误或者已经超时，请求路径：/role/list, 异常信息: {}
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2019-03-21T15:17:33Z. Current time: 2019-03-21T15:40:02Z, a difference of 1349688 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at xifu.com.utils.JwtUtils.parserToken(JwtUtils.java:90)
+	at xifu.com.utils.JwtUtils.getInfoFromToken(JwtUtils.java:115)
+	at xifu.com.intercepters.UserAuthInterceptor.preHandle(UserAuthInterceptor.java:58)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1033)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+15:40:02.719 [http-nio-8300-exec-7] ERROR x.c.intercepters.UserAuthInterceptor - 请求数据错误或者已经超时，请求路径：/page, 异常信息: {}
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2019-03-21T15:17:33Z. Current time: 2019-03-21T15:40:02Z, a difference of 1349688 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at xifu.com.utils.JwtUtils.parserToken(JwtUtils.java:90)
+	at xifu.com.utils.JwtUtils.getInfoFromToken(JwtUtils.java:115)
+	at xifu.com.intercepters.UserAuthInterceptor.preHandle(UserAuthInterceptor.java:58)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1033)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+15:40:09.319 [http-nio-8300-exec-9] DEBUG xifu.com.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,login_name,password,salt,nice_name,phone,email,gender,status,user_type,enterprise_id,qq,create_user_id,create_date,modify_user_id,modify_date FROM tb_user WHERE login_name = ? 
+15:40:09.320 [http-nio-8300-exec-9] DEBUG xifu.com.mapper.UserMapper.selectOne - ==> Parameters: admin(String)
+15:40:09.366 [http-nio-8300-exec-9] DEBUG xifu.com.mapper.UserMapper.selectOne - <==      Total: 1
+15:40:09.369 [http-nio-8300-exec-9] DEBUG x.com.mapper.UserMapper.getRoleIds - ==>  Preparing: select role_id from tb_user_role where user_id = ? 
+15:40:09.369 [http-nio-8300-exec-9] DEBUG x.com.mapper.UserMapper.getRoleIds - ==> Parameters: 1(Long)
+15:40:09.373 [http-nio-8300-exec-9] DEBUG x.com.mapper.UserMapper.getRoleIds - <==      Total: 1
+15:40:09.374 [http-nio-8300-exec-9] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==>  Preparing: SELECT DISTINCT auth_id FROM tb_role_auth WHERE role_id IN ( ? ) 
+15:40:09.375 [http-nio-8300-exec-9] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==> Parameters: 1(Long)
+15:40:09.376 [http-nio-8300-exec-9] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - <==      Total: 0
+15:40:09.800 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+15:40:09.800 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+15:40:09.802 [http-nio-8300-exec-2] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+15:40:09.803 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+15:40:09.803 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+15:40:09.814 [http-nio-8300-exec-2] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+15:40:10.096 [http-nio-8300-exec-1] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+15:40:10.098 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+15:40:10.098 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+15:40:10.101 [http-nio-8300-exec-1] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+15:40:10.102 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+15:40:10.102 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+15:40:10.106 [http-nio-8300-exec-1] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+15:40:10.106 [http-nio-8300-exec-1] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+15:40:10.107 [http-nio-8300-exec-1] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:40:10.133 [http-nio-8300-exec-1] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+15:40:12.786 [http-nio-8300-exec-3] DEBUG x.c.m.E.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_enterprise 
+15:40:12.786 [http-nio-8300-exec-3] DEBUG x.c.m.E.selectByExample_COUNT - ==> Parameters: 
+15:40:12.787 [http-nio-8300-exec-3] DEBUG x.c.m.E.selectByExample_COUNT - <==      Total: 1
+15:40:12.787 [http-nio-8300-exec-3] DEBUG x.c.m.E.selectByExample - ==>  Preparing: SELECT id,name,description,parent_id,avatar_path,address,contact_people,contact_phone,email,device_limit,user_limit,create_user_id,create_date,modify_user_id,modify_date,longitude,latitude,radius,logo FROM tb_enterprise LIMIT ? 
+15:40:12.787 [http-nio-8300-exec-3] DEBUG x.c.m.E.selectByExample - ==> Parameters: 10(Integer)
+15:40:12.792 [http-nio-8300-exec-3] DEBUG x.c.m.E.selectByExample - <==      Total: 10
+15:42:15.094 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:42:17.038 [http-nio-8300-exec-7] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+15:42:17.062 [http-nio-8300-exec-8] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+15:42:17.066 [http-nio-8300-exec-8] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+15:42:17.072 [http-nio-8300-exec-8] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+15:42:17.084 [http-nio-8300-exec-8] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+15:42:17.085 [http-nio-8300-exec-8] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+15:42:17.087 [http-nio-8300-exec-8] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+15:42:17.087 [http-nio-8300-exec-7] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+15:42:17.087 [http-nio-8300-exec-7] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+15:42:17.089 [http-nio-8300-exec-7] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+15:42:17.090 [http-nio-8300-exec-7] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+15:42:17.090 [http-nio-8300-exec-7] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+15:42:17.092 [http-nio-8300-exec-7] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+15:42:17.094 [http-nio-8300-exec-7] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+15:42:17.095 [http-nio-8300-exec-7] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:42:17.096 [http-nio-8300-exec-7] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+15:42:34.410 [http-nio-8300-exec-10] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+15:42:34.411 [http-nio-8300-exec-10] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+15:42:34.465 [http-nio-8300-exec-10] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+15:43:20.203 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+15:43:20.203 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+15:43:20.207 [http-nio-8300-exec-3] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+15:44:34.640 [http-nio-8300-exec-6] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+15:44:34.663 [http-nio-8300-exec-6] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+15:44:34.663 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+15:44:34.665 [http-nio-8300-exec-6] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+15:44:34.665 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+15:44:34.671 [http-nio-8300-exec-5] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+15:44:34.671 [http-nio-8300-exec-6] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+15:44:34.672 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+15:44:34.672 [http-nio-8300-exec-6] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+15:44:34.672 [http-nio-8300-exec-6] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+15:44:34.672 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+15:44:34.674 [http-nio-8300-exec-5] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+15:44:34.674 [http-nio-8300-exec-6] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+15:44:34.676 [http-nio-8300-exec-6] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+15:44:34.676 [http-nio-8300-exec-6] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+15:44:34.678 [http-nio-8300-exec-6] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+15:44:38.817 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+15:44:38.817 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+15:44:38.820 [http-nio-8300-exec-7] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+15:47:15.100 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:52:15.101 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+15:57:15.103 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:02:15.107 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:07:15.108 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:12:15.111 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:17:15.115 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:22:15.116 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:22:53.178 [http-nio-8300-exec-2] ERROR x.c.intercepters.UserAuthInterceptor - 请求数据错误或者已经超时，请求路径：/page, 异常信息: {}
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2019-03-21T16:10:09Z. Current time: 2019-03-21T16:22:53Z, a difference of 764174 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at xifu.com.utils.JwtUtils.parserToken(JwtUtils.java:90)
+	at xifu.com.utils.JwtUtils.getInfoFromToken(JwtUtils.java:115)
+	at xifu.com.intercepters.UserAuthInterceptor.preHandle(UserAuthInterceptor.java:58)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1033)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+16:22:53.185 [http-nio-8300-exec-1] ERROR x.c.intercepters.UserAuthInterceptor - 请求数据错误或者已经超时，请求路径：/role/list, 异常信息: {}
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2019-03-21T16:10:09Z. Current time: 2019-03-21T16:22:53Z, a difference of 764185 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at xifu.com.utils.JwtUtils.parserToken(JwtUtils.java:90)
+	at xifu.com.utils.JwtUtils.getInfoFromToken(JwtUtils.java:115)
+	at xifu.com.intercepters.UserAuthInterceptor.preHandle(UserAuthInterceptor.java:58)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:136)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1033)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+16:23:06.741 [http-nio-8300-exec-3] DEBUG xifu.com.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,login_name,password,salt,nice_name,phone,email,gender,status,user_type,enterprise_id,qq,create_user_id,create_date,modify_user_id,modify_date FROM tb_user WHERE login_name = ? 
+16:23:06.743 [http-nio-8300-exec-3] DEBUG xifu.com.mapper.UserMapper.selectOne - ==> Parameters: admin(String)
+16:23:06.814 [http-nio-8300-exec-3] DEBUG xifu.com.mapper.UserMapper.selectOne - <==      Total: 1
+16:23:06.816 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.getRoleIds - ==>  Preparing: select role_id from tb_user_role where user_id = ? 
+16:23:06.816 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.getRoleIds - ==> Parameters: 1(Long)
+16:23:06.825 [http-nio-8300-exec-3] DEBUG x.com.mapper.UserMapper.getRoleIds - <==      Total: 1
+16:23:06.827 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==>  Preparing: SELECT DISTINCT auth_id FROM tb_role_auth WHERE role_id IN ( ? ) 
+16:23:06.827 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - ==> Parameters: 1(Long)
+16:23:06.830 [http-nio-8300-exec-3] DEBUG x.c.m.UserMapper.getAuthIdsByRoleIds - <==      Total: 0
+16:23:07.260 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_role 
+16:23:07.260 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - ==> Parameters: 
+16:23:07.276 [http-nio-8300-exec-4] DEBUG x.c.m.R.selectByExample_COUNT - <==      Total: 1
+16:23:07.277 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - ==>  Preparing: SELECT id,name,role_type,description,status,enterprise_id,create_user_id,create_date,modify_user_id,modify_date FROM tb_role LIMIT ? 
+16:23:07.277 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - ==> Parameters: 10(Integer)
+16:23:07.279 [http-nio-8300-exec-4] DEBUG x.c.m.RoleMapper.selectByExample - <==      Total: 7
+16:23:07.556 [http-nio-8300-exec-5] INFO  xifu.com.controller.UserController - user info= UserInfo(id=1, loginName=admin, niceName=系统管理员, userType=2, enterpriseId=0, roleIds=[1], authIds=[], resourceIds=[])
+16:23:07.559 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id 
+16:23:07.559 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - ==> Parameters: 
+16:23:07.576 [http-nio-8300-exec-5] DEBUG x.c.m.UserMapper.findAllUsers_COUNT - <==      Total: 1
+16:23:07.576 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - ==>  Preparing: SELECT U.*, E.name enterprise_name FROM tb_user U LEFT JOIN tb_enterprise E ON U.enterprise_id = E.id LIMIT ? 
+16:23:07.576 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - ==> Parameters: 10(Integer)
+16:23:07.578 [http-nio-8300-exec-5] DEBUG x.com.mapper.UserMapper.findAllUsers - <==      Total: 10
+16:23:07.578 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==>  Preparing: SELECT DISTINCT ur.user_id userId, r.`name` FROM tb_user_role ur LEFT JOIN tb_role r ON ur.role_id = r.id WHERE ur.user_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) 
+16:23:07.579 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - ==> Parameters: 1(Long), 2(Long), 4(Long), 5(Long), 6(Long), 7(Long), 8(Long), 9(Long), 10(Long), 11(Long)
+16:23:07.602 [http-nio-8300-exec-5] DEBUG x.c.m.U.findUserRoleNameByUserIds - <==      Total: 10
+16:23:11.972 [http-nio-8300-exec-7] DEBUG x.c.m.E.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM tb_enterprise 
+16:23:11.973 [http-nio-8300-exec-7] DEBUG x.c.m.E.selectByExample_COUNT - ==> Parameters: 
+16:23:11.974 [http-nio-8300-exec-7] DEBUG x.c.m.E.selectByExample_COUNT - <==      Total: 1
+16:23:11.974 [http-nio-8300-exec-7] DEBUG x.c.m.E.selectByExample - ==>  Preparing: SELECT id,name,description,parent_id,avatar_path,address,contact_people,contact_phone,email,device_limit,user_limit,create_user_id,create_date,modify_user_id,modify_date,longitude,latitude,radius,logo FROM tb_enterprise LIMIT ? 
+16:23:11.974 [http-nio-8300-exec-7] DEBUG x.c.m.E.selectByExample - ==> Parameters: 10(Integer)
+16:23:11.999 [http-nio-8300-exec-7] DEBUG x.c.m.E.selectByExample - <==      Total: 10
+16:23:46.662 [http-nio-8300-exec-8] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+16:23:46.663 [http-nio-8300-exec-8] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+16:23:46.691 [http-nio-8300-exec-8] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+16:27:15.120 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:32:03.955 [http-nio-8300-exec-2] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+16:32:03.955 [http-nio-8300-exec-2] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+16:32:03.957 [http-nio-8300-exec-2] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+16:32:15.122 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:35:23.438 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+16:35:23.441 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+16:35:23.447 [http-nio-8300-exec-4] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+16:37:15.123 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:40:46.751 [http-nio-8300-exec-6] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+16:40:46.752 [http-nio-8300-exec-6] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+16:40:46.758 [http-nio-8300-exec-6] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+16:42:15.126 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:42:59.582 [http-nio-8300-exec-8] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+16:42:59.586 [http-nio-8300-exec-8] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+16:42:59.593 [http-nio-8300-exec-8] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+16:47:15.128 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:48:22.733 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+16:48:22.733 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+16:48:22.734 [http-nio-8300-exec-9] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+16:49:37.621 [http-nio-8300-exec-2] DEBUG x.c.mapper.StationInfoMapper.select - ==>  Preparing: SELECT id,station_code,station_name,installed_capacity,station_build_status,produce_date,online_type,station_type,inverter_type,install_angle,assembly_layout,floor_space,amsl,life_cycle,safe_run_datetime,is_poverty_relief,station_file_id,station_addr,station_desc,contact_people,phone,station_price,latitude,longitude,time_zone,area_code,enterprise_id,domain_id,is_delete,create_user_id,create_date,update_user_id,update_date,is_monitor FROM tb_station_info WHERE station_name = ? AND is_delete = ? AND is_monitor = ? 
+16:49:37.621 [http-nio-8300-exec-2] DEBUG x.c.mapper.StationInfoMapper.select - ==> Parameters: 测试电站(String), false(Boolean), false(Boolean)
+16:49:37.622 [http-nio-8300-exec-2] DEBUG x.c.mapper.StationInfoMapper.select - <==      Total: 1
+16:52:15.130 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+16:57:15.130 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:02:15.132 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:07:15.141 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:12:15.141 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:17:15.143 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:22:15.147 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:27:15.149 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:32:15.151 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:37:15.154 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:42:15.156 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:47:15.157 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:52:15.158 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+17:57:15.159 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+18:02:15.161 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+18:07:15.162 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration

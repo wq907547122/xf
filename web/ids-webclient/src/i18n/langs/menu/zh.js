@@ -23,6 +23,10 @@ export default {
       stationManager: {
         title: '电站管理',
         station: '电站信息'
+      },
+      paramConfig: {
+        title: '参数配置',
+        pointManage: '点表管理'
       }
     }
   }

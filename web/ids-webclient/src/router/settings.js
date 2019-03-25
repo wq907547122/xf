@@ -19,6 +19,8 @@ const RoleManage = resolve => require.ensure([], () => resolve(require('@/pages/
 const UserManage = resolve => require.ensure([], () => resolve(require('@/pages/settings/userManager/user/index.vue')), 'userManage')
 // 电站管理
 const StationManage = resolve => require.ensure([], () => resolve(require('@/pages/settings/stationManage/station/index.vue')), 'stationManage')
+// 点表导入
+const PointManage = resolve => require.ensure([], () => resolve(require('@/pages/settings/paramConfig/pointManage/index.vue')), 'pointManage')
 
 // 因为后面使用扩展运算符...，所以这里使用数组，最后都是把数组中的所有数据依次取出添加到路由中
 export default [
@@ -82,6 +84,24 @@ export default [
             component: UserManage,
             meta: {
               role: ['accountManager'],
+              showSidebar: true // 显示左边菜单栏
+            }
+          }
+        ]
+      },
+      { // 参数配置
+        path: '/settings/paramConfig',
+        name: 'menu.settings.paramConfig.title',
+        redirect: '/settings/paramConfig/pointManage',
+        icon: 'icon-paramConfig',
+        component: SettingsLayout,
+        children: [
+          { // 点表管理
+            path: 'pointManage',
+            name: 'menu.settings.paramConfig.pointManage',
+            component: PointManage,
+            meta: {
+              role: ['pointManage'],
               showSidebar: true // 显示左边菜单栏
             }
           }
