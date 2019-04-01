@@ -5,19 +5,27 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
+import org.springframework.data.redis.connection.RedisStringCommands;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.TimeoutUtils;
 import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.data.redis.core.types.Expiration;
+import org.springframework.data.redis.serializer.RedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
+import org.springframework.util.CollectionUtils;
 import xifu.com.mapper.DevInfoMapper;
 import xifu.com.mapper.DevModelVersionMapper;
 import xifu.com.pojo.devService.DevInfo;
 import xifu.com.pojo.devService.DevModelVersion;
 import xifu.com.utils.JsonUtils;
 
+import javax.annotation.PostConstruct;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -40,6 +48,23 @@ public class DevModelsCache {
     private String multKeySplit = "::"; // 多个字符串确定一个key的分割
 
     // =========== 设备版本缓存的相关代码 开始 ========>=======
+
+    /**
+     * 启动程序的时候初始化缓存数据 1：清空缓存 2：设置数据库中的缓存
+     */
+    @PostConstruct
+    public void init() {
+        // 1.清除缓存
+        Set<String> keys = template.keys(CacheConstant.CACHE_DEV_PREX_PATTERN);
+        if (!CollectionUtils.isEmpty(keys)) { // 批量删除key
+            template.delete(keys);
+        }
+        // 2.查询数据
+        List<DevModelVersion> devModelVersions = devModelVersionMapper.selectAll();
+        this.batchInsertDevModelVersion(devModelVersions);
+        List<DevInfo> devInfos = devInfoMapper.selectAll();
+        this.batchDevs(devInfos);
+    }
     /**
      * 根据版本号获取缓存中的版本信息
      * 在redis中保存的信息是  modelVersionCode -> 找到当前的版本id -> 找到对应的版本信息
@@ -59,9 +84,61 @@ public class DevModelsCache {
      * @param list
      */
     public void batchInsertDevModelVersion(List<DevModelVersion> list) {
-       for (DevModelVersion v : list) {
-           setDevModelVersion(v);
-       }
+        if (CollectionUtils.isEmpty(list)) {
+            return;
+        }
+        // 批量处理数据
+        // 获取key的系列化方式
+        final StringRedisSerializer keySerializer = (StringRedisSerializer)template.getKeySerializer();
+        // 获取value的系列化方式
+        final RedisSerializer<String> valueStrSerializer = (RedisSerializer<String>)template.getValueSerializer();
+        boolean isMill = TimeUnit.MILLISECONDS.equals(timeUnit); // 单位是否是毫秒
+        // 再批量新增,使用的管道，参考的单个的新增的
+        template.executePipelined(new RedisCallback() {
+            @Nullable
+            @Override
+            public Object doInRedis(RedisConnection connection) throws DataAccessException {
+                // id的key和modelVersionCode的key
+                byte[] key1 = null, key2 = null;
+                for (DevModelVersion v  : list) {
+                    Long id = v.getId();
+                    if (id == null) {
+                        continue;
+                    }
+                    String idStr = id.toString();
+                    key1 = keySerializer.serialize(getModelVersionIdKey(idStr)); // 版本id的key
+                    key2 = keySerializer.serialize(getModelVersionCodeKey(v.getModelVersionCode())); // 版本的
+                    // 获取序列化的内容
+                    byte[] objSeriaData = valueStrSerializer.serialize(JsonUtils.toJson(v));
+                    byte[] idSeriaData = valueStrSerializer.serialize(idStr);
+                    if (!isMill || !failsafeInvokePsetEx(connection, key1, objSeriaData)) {
+                        // 单位是s的设置
+                        connection.setEx(key1, cacheExpireTime, objSeriaData);
+                    }
+                    // 存放modelversionCode - > id的映射
+                    if (!isMill || !failsafeInvokePsetEx(connection, key2, idSeriaData)) { // 只有如果单位不是毫秒的就直接进入，如果是毫秒的设置失败也直接重新设置
+                        connection.setEx(key2, cacheExpireTime, idSeriaData);
+                    }
+                }
+                connection.closePipeline();
+                return null;
+            }
+            // 使用的源码的方式设置数据到redis,这里是设置毫秒的设置
+            private boolean failsafeInvokePsetEx(RedisConnection connection, byte[] rawKey, byte[] rawValue) {
+                boolean failed = false;
+                try {
+                    connection.pSetEx(rawKey, cacheExpireTime, rawValue); // 设置的毫秒
+                } catch (UnsupportedOperationException e) {
+                    // in case the connection does not support pSetEx return false to allow fallback to other operation.
+                    failed = true;
+                }
+                return !failed;
+            }
+        });
+
+//        for (DevModelVersion v : list) {
+//           setDevModelVersion(v);
+//        }
     }
     /**
      * 通过id查询数据版本信息
@@ -84,8 +161,8 @@ public class DevModelsCache {
             return;
         }
         String idStr = devModelVersion.getId().toString(); // 版本id转换为字符串
-        String codeKey = CacheConstant.DEV_VERSION_CODE_PREX + devModelVersion.getModelVersionCode(); // 版本的key
-        String idKey = CacheConstant.DEV_VERSION_ID_PREX + idStr; // id的key
+        String codeKey = getModelVersionCodeKey(devModelVersion.getModelVersionCode()); // 版本的key
+        String idKey = getModelVersionIdKey(idStr); // id的key
         String value = JsonUtils.toJson(devModelVersion);
         ValueOperations<String, String> options = template.opsForValue();
         removeDevVersion(devModelVersion); // 移除缓存
@@ -95,6 +172,10 @@ public class DevModelsCache {
         // 取值流程 modelVersionCode -> 获取id -> 获得版本信息
         // 如果是版本编号，第一次取得的是版本的id，然后在通过版本id获取对应真正的版本信息的json字符串内容
         options.set(codeKey, idStr, cacheExpireTime, timeUnit);
+    }
+
+    private String getModelVersionCodeKey(String modelVersionCode) {
+        return CacheConstant.DEV_VERSION_CODE_PREX + modelVersionCode;
     }
 
     /**
@@ -107,11 +188,15 @@ public class DevModelsCache {
             log.warn("[移除版本信息的错误]");
             return;
         }
-        String key1 = CacheConstant.DEV_VERSION_ID_PREX + version.getId();
-        String key2 = CacheConstant.DEV_VERSION_CODE_PREX + version.getModelVersionCode();
+        String key1 = getModelVersionIdKey(version.getId().toString());
+        String key2 = getModelVersionCodeKey(version.getModelVersionCode());
         // 移除缓存的key
         template.delete(Arrays.asList(key1, key2,
                 key1 + CacheConstant.LOCKED_SUFFIX, key2 + CacheConstant.LOCKED_SUFFIX));
+    }
+
+    private String getModelVersionIdKey(String id) {
+        return CacheConstant.DEV_VERSION_ID_PREX + id;
     }
 
     /**
@@ -163,6 +248,20 @@ public class DevModelsCache {
         }
         return JsonUtils.jsonToPojo(modelStr, DevModelVersion.class);
     }
+
+    /**
+     * 批量删除缓存
+     * @param list 集合中每个元素必须包含id和modelVersionCode
+     */
+    public void batchDelDevVersionCaches(List<DevModelVersion> list) {
+        if (CollectionUtils.isEmpty(list)) {
+            log.warn("无版本信息需要移除");
+            return;
+        }
+        for(DevModelVersion dev : list) {
+            removeDevVersion(dev);
+        }
+    }
     // ====<====== 设备版本缓存的相关代码 结束 ==============
 
     // ====>>>==== 设备信息的缓存相关代码 开始 =======>>>=====
@@ -187,9 +286,57 @@ public class DevModelsCache {
      * @param list
      */
     public void batchDevs(List<DevInfo> list) {
-        for (DevInfo d : list) {
-            setDevInifo(d);
+        if (CollectionUtils.isEmpty(list)) {
+            return;
         }
+        // 批量处理数据
+        // 获取key的系列化方式
+        final StringRedisSerializer keySerializer = (StringRedisSerializer)template.getKeySerializer();
+        // 获取value的系列化方式
+        final RedisSerializer<String> valueStrSerializer = (RedisSerializer<String>)template.getValueSerializer();
+        boolean isMill = TimeUnit.MILLISECONDS.equals(timeUnit); // 单位是否是毫秒
+        template.executePipelined(new RedisCallback() {
+
+            @Nullable
+            @Override
+            public Object doInRedis(RedisConnection connection) throws DataAccessException {
+                byte[] key1 = null, key2 = null;
+                for(DevInfo d : list) {
+                    Long id = d.getId();
+                    if (id == null) {
+                        continue;
+                    }
+                    String idStr = id.toString();
+                    key1 = keySerializer.serialize(getDevIdKey(idStr));
+                    key2 = keySerializer.serialize(getDevNameCacheKey(d.getStationCode(), d.getDevName()));
+                    // 获取序列化的内容
+                    byte[] objSeriaData = valueStrSerializer.serialize(JsonUtils.toJson(d));
+                    byte[] idSeriaData = valueStrSerializer.serialize(idStr);
+                    if (!isMill || !failsafeInvokePsetEx(connection, key1, objSeriaData)) {
+                        connection.setEx(key1, cacheExpireTime, objSeriaData);
+                    }
+                    if (!isMill || !failsafeInvokePsetEx(connection, key2, idSeriaData)) {
+                        connection.setEx(key2, cacheExpireTime, idSeriaData);
+                    }
+                }
+                connection.closePipeline();
+                return null;
+            }
+            // 使用的源码的方式设置数据到redis,这里是设置毫秒的设置
+            private boolean failsafeInvokePsetEx(RedisConnection connection, byte[] rawKey, byte[] rawValue) {
+                boolean failed = false;
+                try {
+                    connection.pSetEx(rawKey, cacheExpireTime, rawValue); // 设置的毫秒
+                } catch (UnsupportedOperationException e) {
+                    // in case the connection does not support pSetEx return false to allow fallback to other operation.
+                    failed = true;
+                }
+                return !failed;
+            }
+        });
+//        for (DevInfo d : list) {
+//            setDevInifo(d);
+//        }
     }
     /**
      * 根据设备id查询数据
@@ -235,7 +382,7 @@ public class DevModelsCache {
         if (!isSearchDb) { // 如果不查询数据库,就直接返回空，因为缓存里面没有数据
             return null;
         }
-        // TODO 查询数据库
+        // 查询数据库
         synchronized (this) { // 避免给数据库造成压力，这里使用同步，值允许一个进入
             devStr = option.get(key);
             if (StringUtils.isNotBlank(devStr)) { // 如果其他的线程去处理的时候查询了，就会有值
@@ -277,13 +424,17 @@ public class DevModelsCache {
             log.warn("no dev for set");
             return;
         }
-        String key1 = CacheConstant.DEV_ID_PREX + devInfo.getId();
-        String key2 = CacheConstant.DEV_NAME_PREX + getDevNameKey(devInfo.getStationCode(), devInfo.getDevName());
+        String key1 = getDevIdKey(devInfo.getId().toString());
+        String key2 = getDevNameCacheKey(devInfo.getStationCode(), devInfo.getDevName());
         String devStr = JsonUtils.toJson(devInfo);
         deleteDevInfo(devInfo); // 删除一些锁定的信息
         ValueOperations<String, String> option = template.opsForValue();
         option.set(key1, devStr, cacheExpireTime, timeUnit);
         option.set(key2, key1, cacheExpireTime, timeUnit);
+    }
+    // 获取设备id的缓存redis的key的字符串
+    private String getDevIdKey(String devId) {
+        return CacheConstant.DEV_ID_PREX + devId;
     }
 
     // 删除设备的缓存
@@ -292,10 +443,30 @@ public class DevModelsCache {
             log.warn("缺少需要删除设备信息的内容");
             return;
         }
-        String key1 = CacheConstant.DEV_ID_PREX + devInfo.getId();
-        String key2 = CacheConstant.DEV_NAME_PREX + getDevNameKey(devInfo.getStationCode(), devInfo.getDevName());
+        String key1 = getDevIdKey(devInfo.getId().toString());
+        String key2 = getDevNameCacheKey(devInfo.getStationCode(), devInfo.getDevName());
         template.delete(Arrays.asList(key1, key2,
                 key1 + CacheConstant.LOCKED_SUFFIX, key2 + CacheConstant.LOCKED_SUFFIX));
+    }
+
+    private String getDevNameCacheKey(String stationCode, String devName) {
+        return CacheConstant.DEV_NAME_PREX + getDevNameKey(stationCode, devName);
+    }
+
+    // 批量删除设备缓存的信息
+
+    /**
+     * 批量删除设备缓存的信息
+     * @param devInfos
+     */
+    public void batchDelDevInfos(List<DevInfo> devInfos) {
+        if (CollectionUtils.isEmpty(devInfos)) {
+            log.warn("无设备信息需要移除");
+            return;
+        }
+        for (DevInfo d : devInfos) {
+            deleteDevInfo(d);
+        }
     }
     // ====<<<==== 设备信息的缓存相关代码 结束 =======<<<=====
 }

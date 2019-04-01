@@ -13,4 +13,10 @@ public interface DevService {
      * @throws Exception
      */
     void importPoint(MultipartFile file) throws Exception;
+
+    /**
+     * 根据id删除点表信息
+     * @param id
+     */
+    void deleteById(Long id);
 }

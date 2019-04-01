@@ -1,19 +1,7 @@
 <template>
   <!-- 点表管理模块：点表导入和归一化配置的信息 -->
   <div>
-    <!--<el-upload
-      class="upload-demo"
-      ref="upload"
-      :action="'/api/dev/point?tokenId=' + tokenId"
-      :on-success="uploadSuccess"
-      :on-error="uploadError"
-      name="file"
-      :auto-upload="false">
-      <input type="hidden" name="tokenId" :value="tokenId"/>
-      <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
-      <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</el-button>
-      <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
-    </el-upload>-->
+    <!-- 点表导入 -->
     <el-form :inline="true" style="float: left;">
       <el-form-item>
         <el-input disabled :value="myFileName" placeholder="请选择文件"></el-input>
@@ -29,6 +17,65 @@
         ></fileUpload>
       </el-form-item>
     </el-form>
+    <!-- 展示以及导入了的点表信息列表 -->
+    <el-table ref="versionTable"
+      :data="versionList"
+      @selection-change="handleSelectionChange"
+      @row-click="rowClick"
+      border
+      style="width: 100%">
+      <el-table-column
+        type="selection"
+        width="55"
+        align="center"
+      >
+      </el-table-column>
+      <el-table-column
+        align="center"
+        prop="name"
+        label="点表名称">
+      </el-table-column>
+      <el-table-column
+        align="center"
+        prop="devTypeId"
+        label="设备类型">
+        <template slot-scope="{row}">
+          {{ $t('devTypeId.' + row.devTypeId) }}
+        </template>
+      </el-table-column>
+      <el-table-column
+        align="center"
+        prop="modelVersionCode"
+        label="版本号">
+      </el-table-column>
+      <el-table-column
+        align="center"
+        prop="createDate"
+        label="导入日期">
+        <template slot-scope="{row}">
+          {{row.createDate | dateFormat('yyyy-MM-dd HH:mm:ss')}}
+        </template>
+      </el-table-column>
+      <el-table-column
+        align="center"
+        prop="p"
+        label="操作">
+        <template slot-scope="{row}">
+          <el-button type="primary" icon="el-icon-info" size="mini">详情</el-button>
+          <el-button type="danger" icon="el-icon-delete" size="mini" @click.stop="deleteVersion(row)">删除</el-button>
+        </template>
+      </el-table-column>
+    </el-table>
+    <!-- 分页栏 -->
+    <el-pagination
+      @size-change="pageSizeChange"
+      @current-change="pageChange"
+      :current-page="searchData.page"
+      :page-sizes="[10, 20, 30, 50]"
+      :page-size="searchData.pageSize"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="total">
+    </el-pagination>
   </div>
 </template>
 
@@ -39,30 +86,103 @@ export default {
   },
   data () {
     return {
+      vm: this,
       tokenId: sessionStorage.getItem('token-id'),
       importUrl: '/api/dev/point?tokenId=' + sessionStorage.getItem('token-id'),
       myFileName: null,
       // 允许的文件类型 excel
       myFileType: ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-        'application/vnd.ms-excel', 'text/csv']
+        'application/vnd.ms-excel', 'text/csv'],
+      // 当前系统导入了的版本的列表
+      versionList: [],
+      searchData: { // 查询的数据
+        page: 1,
+        pageSize: 10
+      },
+      // 当前的总记录数
+      total: 0,
+      // 当前多选的记录
+      multipleSelection: []
     }
   },
-  filters: {},
+  created () { // 在创建的生命钩子中执行的加载数据
+    this.queryVersionList()
+  },
+  filters: {
+    dateFormat (val, fmt = 'yyyy-MM-dd HH:mm:ss') { // 后台返回日期格式数据的格式
+      if (!val) {
+        return ''
+      }
+      // return vm.$moment(new Date(val)).format('YYYY-MM-DD HH:mm:ss')
+      return new Date(val).format(fmt)
+    }
+  },
   mounted: function () {
     this.$nextTick(function () {
     })
   },
   methods: {
-    // submitUpload () { // 提交
-    //   this.$refs.upload.submit()
-    // },
-    uploadSuccess (response, file, fileList) { // 上传成功的提示信息
+    uploadSuccess (response, file, fileList) { // 点表导入成功,重新加载数据
+      this.queryVersionList()
     },
-    // uploadError () { // 上传失败
-    //   this.$message.error('导入失败')
-    // },
     setInputText (file) { // 上传验证成功后修改显示的信息
       this.myFileName = file.name
+    },
+    queryVersionList (isToFirstPage) { // 查询当前系统导入的版本列表
+      if (isToFirstPage) { // 是否是到第一页
+        this.searchData.page = 1
+      }
+      this.$http.get('api/dev/devVersion/page', {
+        params: this.searchData})
+        .then(resp => {
+          this.versionList = resp.data.list
+          this.total = resp.data.total
+        }, () => { // 没有查询到数据的异常
+          this.versionList = []
+          this.total = 0
+        }).catch(() => {
+          this.versionList = []
+          this.total = 0
+        })
+    },
+    pageChange (val) { // 当前页数改变的事件
+      this.searchData.page = val
+      this.queryVersionList()
+    },
+    pageSizeChange (val) { // 每页显示的记录数量改变
+      this.searchData.pageSize = val
+      this.queryVersionList(true) // 到第一页
+    },
+    handleSelectionChange (val) { // 当前选中记录改变的事件
+      this.multipleSelection = val
+    },
+    rowClick (row, column, event) { // 点击当前行选中改变的事件
+      this.$refs.versionTable.toggleRowSelection(row) // 修改选中状态后会制动调用handleSelectionChange方法
+    },
+    deleteVersion (row) { // 点击删除按钮的事件
+      this.$confirm(`确认删除[${row.name}]的点表信息,删除后将不可恢复?`, '提示',
+        {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        })
+        .then(() => {
+          // TODO 开始删除
+          this.$http.delete('api/dev/devVersion/ph/' + row.id).then(() => {
+            this.$message.success('删除成功')
+            if (this.versionList.length === 1) { // 当前页只有一条数据，就需要查询上一页数据
+              this.searchData.page = (this.searchData.page - 1) || 1
+            }
+            this.queryVersionList() // 调用真正查询数据的方法
+          }, error => {
+            this.$message.error(error.message || '删除失败')
+          }).catch(() => {
+            this.$message.error('删除失败')
+          })
+        })
+        .catch(() => {
+          console.log('已取消删除')
+        })
     }
   },
   watch: {},

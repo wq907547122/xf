@@ -26,12 +26,14 @@ public enum ExceptionEnum {
     DOMAIN_EXSIT_CHILDREN_FOUND(400, "区域存在子区域，不能删除"),
     INVALID_USER_PARAM(400, "无效的用户参数"),
     INVALID_ROLE_PARAM(400, "无效的参数信息"),
+    INVALID_PARAM(400, "无效的参数信息"),
     AUTH_NOT_FOUND(404, "角色信息不存在"),
     NO_AUTH(401, "无操作权限"),
     ADD_ENTERPRISE_FAILED(400, "新增企业失败"),
     FILE_TOO_LARGE(400, "文件过大"),
     FILE_UPLOAD_FAILED(400, "文件上传失败"),
-    POINT_IMPORT_PARSE_ERROR(500, "点表解析错误")
+    POINT_IMPORT_PARSE_ERROR(500, "点表解析错误"),
+    DEV_MODEL_VERSION_NOT_FOUND(404, "版本信息不存在"),
     ;
     private int code;
     private String msg;

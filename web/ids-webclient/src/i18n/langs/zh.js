@@ -2,6 +2,7 @@ import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
 // 设备管理界面的URL到路由的那一层结束
 import devManage from './settings/station-manage/devManage/zh'
 import Menu from './menu/zh'
+import DevTypeId from './devTypeId/zh'
 
 export default {
   systemName: '智慧新能源管理系统',
@@ -528,5 +529,6 @@ export default {
   },
   ...zhLocale,
   ...devManage,
-  ...Menu
+  ...Menu,
+  ...DevTypeId
 }

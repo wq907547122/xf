@@ -30,6 +30,7 @@ import 'echarts/lib/component/tooltip'
 import 'echarts/lib/component/polar'
 import 'echarts/lib/component/legend'
 import 'echarts/lib/component/title.js'
+
 Vue.component('v-chart', ECharts)
 // 扩展Object对象和Date对象的方法
 require('@/utils/prototype.js')
@@ -47,6 +48,11 @@ Vue.use(VueLazyload, {
 })
 // 添加点击外部执行的事件
 Vue.directive('clickoutside', Clickaway)
+// 对时间的格式化的操作的插件
+// const moment = require('moment')
+// Vue.use(require('vue-moment'), {
+//   moment
+// })
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
   let tokenId = sessionStorage.getItem('token-id')

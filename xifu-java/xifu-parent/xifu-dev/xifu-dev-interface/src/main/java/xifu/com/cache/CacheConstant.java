@@ -5,6 +5,8 @@ package xifu.com.cache;
  * @auth wq on 2019/3/19 15:15
  **/
 public interface CacheConstant {
+    // 设备微服务中所有缓存的前缀
+    String CACHE_DEV_PREX_PATTERN = "dev:*";
     /**
      * 根据id获取缓存数据的常量
      */

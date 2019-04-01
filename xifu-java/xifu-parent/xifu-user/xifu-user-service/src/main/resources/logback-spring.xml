@@ -6,7 +6,8 @@
     <property name="LOG_PATTERN" value="%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n" />
 
     <!-- 定义日志存储的路径，不要配置相对路径 -->
-    <property name="FILE_PATH" value="D:/xifu/logs/spring-log.%d{yyyy-MM-dd}.%i.log" />
+    <!--<property name="FILE_PATH" value="D:/xifu/logs/spring-log.%d{yyyy-MM-dd}.%i.log" />-->
+    <property name="FILE_PATH" value="${user_log}/spring-log.%d{yyyy-MM-dd}.%i.log" />
     <!--<property name="FILE_PATH" value="${log.path}/spring-log.%d{yyyy-MM-dd}.%i.log" />-->
 
     <!-- 控制台输出日志 -->

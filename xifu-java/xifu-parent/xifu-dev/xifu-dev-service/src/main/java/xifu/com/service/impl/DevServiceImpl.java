@@ -14,6 +14,8 @@ import xifu.com.cache.DevModelsCache;
 import xifu.com.client.StationClient;
 import xifu.com.dto.ImportExcelDevDTO;
 import xifu.com.dto.Kr104Dto;
+import xifu.com.exception.ExceptionEnum;
+import xifu.com.exception.XiFuException;
 import xifu.com.mapper.*;
 import xifu.com.menus.DevTypeEnum;
 import xifu.com.menus.ProtocolEnum;
@@ -84,10 +86,10 @@ public class DevServiceImpl implements DevService{
         }
         // 协议类型支持之后，就去做对应的协议类型的解析
         switch (protocolType) {
-            case P_104: // 104 协议 有两个sheet页 第一个sheet是版本和设备信息 第二个sheet是设备的信号点信息
+            case P_104: // 104/铁牛数采 协议 有两个sheet页 第一个sheet是版本和设备信息 第二个sheet是设备的信号点信息
                 // 验证是和判断是否是扩容
                 String stationName = firstRow.get(6);
-                StationInfo stationInfo = checkStationInfo(stationName);
+                StationInfo stationInfo = checkStationInfo(stationName); // 所有的电站名称都应该和第一行的电站名称一致，这里目前没有做验证
                 // 解析和验证当前点表的信息，转换为后面需要存储到数据库中的数据的对象
                 ImportExcelDevDTO importExcelDevDTO = excelTo104Dto(versionStringList,
                         excelUtil.read(1, 1), stationInfo, excelUtil.getSheetName(0));
@@ -204,6 +206,10 @@ public class DevServiceImpl implements DevService{
                 count ++;
                 List<DevSignal> sList = entry.getValue();
                 for (DevSignal s : sList) { // 设置信号点的所属设备的名称
+                    DevVersionSignal dvs = importExcelDevDTO.getModelCodeToModelSignalMap().get(s.getModelVersionCode()).get(s.getSignalName());
+                    if (dvs != null) { // 设置模型id
+                        s.setModelId(dvs.getId());
+                    }
                     s.setDevId(importExcelDevDTO.getDevNameToDevInfoMap().get(s.getDevName()).getId());
                     addSignalList.add(s);
                 }
@@ -319,6 +325,10 @@ public class DevServiceImpl implements DevService{
         Integer devTypeId = DevTypeEnum.getDevTypeIdByName(list.get(0));
         if (devTypeId == null) { // 验证设备类型
             throw new RuntimeException("Sheet 1的第" + index + "行的第1列的设备类型不正确");
+        }
+        String rowStationName = list.get(6).trim();
+        if (!StringUtils.equals(rowStationName, stationInfo.getStationName())) { // 如果电站名称不一致，不要支持新增
+            throw new RuntimeException("Sheet 1的第" + index + "行的电站名称和第一行的电站名称不一致");
         }
         String interfaceVersion = list.get(3).trim();
         String modelVersionCode = list.get(1).trim() + "_" + interfaceVersion;
@@ -630,5 +640,81 @@ public class DevServiceImpl implements DevService{
         }catch (Exception e) {
             log.error("save devInfo failed:", e);
         }
+    }
+
+    /**
+     * 删除版本信息
+     * @param id 版本的id
+     */
+    @Transactional // 统一提交事务
+    @Override
+    public void deleteById(Long id) { // 根据点表信息删除点表信息
+        DevModelVersion devModelVersion = this.devModelVersionMapper.selectByPrimaryKey(id);
+        if (devModelVersion == null) {
+            log.error("[点表删除] 无需要删除的版本信息");
+            throw new XiFuException(ExceptionEnum.DEV_MODEL_VERSION_NOT_FOUND);
+        }
+        if (devModelVersion.getParentId() != null) { // 查询的数据必须是第一级的才支持
+            log.error("[点表删除] 不支持删除子版本信息");
+            throw new XiFuException(ExceptionEnum.INVALID_PARAM);
+        }
+        // 查询通管机设备
+        Example devChilrenExample = new Example(DevModelVersion.class);
+        devChilrenExample.createCriteria().andEqualTo("parentId", id);
+        List<DevModelVersion> devModelVersions = this.devModelVersionMapper.selectByExample(devChilrenExample);
+        // 组装数据
+        List<Long> allModelIdList = new ArrayList<>();
+        allModelIdList.add(devModelVersion.getId()); // 添加需要删除的点表
+        List<String> allModelCodeList = new ArrayList<>();
+        allModelCodeList.add(devModelVersion.getModelVersionCode());
+        devModelVersions.forEach(d -> {
+            allModelIdList.add(d.getId());
+            allModelCodeList.add(d.getModelVersionCode());
+        });
+
+        // 1.删除版本信号点模型的数据
+        Example delVersionSignalExample = new Example(DevVersionSignal.class);
+        delVersionSignalExample.createCriteria().andEqualTo("protocolCode", devModelVersion.getProtocolCode())
+                .andIn("modelVersionCode", allModelCodeList);
+        this.devVersionSignalMapper.deleteByExample(delVersionSignalExample); // 执行删除设备版本的信号点模型
+        // 2.删除设备信号点模型
+        // 2.1 查询设备信息
+        Example devSearchExample = new Example(DevInfo.class);
+        devSearchExample.createCriteria().andIn("modelVersionId", allModelIdList);
+        List<DevInfo> devInfos = this.devInfoMapper.selectByExample(devSearchExample);
+        List<Long> devIds = null;
+        if (!CollectionUtils.isEmpty(devInfos)) { // 如果有设备
+            devIds = devInfos.stream().map(d -> d.getId()).collect(Collectors.toList());
+            Example delDevSignalExample = new Example(DevSignal.class);
+            delDevSignalExample.createCriteria().andIn("devId", devIds);
+            devSignalMapper.deleteByExample(delDevSignalExample); // 执行删除设备信号点的信息
+            // 3.删除设备
+            Example delDevExample = new Example(DevInfo.class);
+            delDevExample.createCriteria().andIn("id", devIds);
+            this.devInfoMapper.deleteByExample(delDevExample); // 执行删除设备
+            // TODO 4.删除对应的归一化
+            // 删除设备的缓存
+        }
+
+
+        // 5.删除版本 和子版本
+        Example delDevVersionExample = new Example(DevModelVersion.class);
+        delDevVersionExample.createCriteria().andIn("id", allModelIdList);
+        devModelVersionMapper.deleteByExample(delDevVersionExample);
+        // 6.删除告警模型
+        Example delAlarmModelExample = new Example(DevAlarmModel.class);
+        delAlarmModelExample.createCriteria().andEqualTo("modelVersionCode", devModelVersion.getModelVersionCode());
+        this.devAlarmModelMapper.deleteByExample(delAlarmModelExample);
+        try {
+            // 7.清除redis缓存
+            // 7.1删除版本
+            this.devModelsCache.removeDevVersion(devModelVersion); // 删除父版本
+            this.devModelsCache.batchDelDevVersionCaches(devModelVersions); // 删除子版本
+            // 7.2删除设备的缓存
+            this.devModelsCache.batchDelDevInfos(devInfos);
+        }catch (Exception e) {
+            log.error("has exception:", e);
+        }
+        // TODO 8.通知设备连接的地方去掉对应的连接信息
     }
 }
