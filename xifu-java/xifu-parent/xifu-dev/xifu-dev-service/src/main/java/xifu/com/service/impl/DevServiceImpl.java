@@ -581,9 +581,18 @@ public class DevServiceImpl implements DevService{
             }
         }
         // 3.查询版本信号点信息 根据版本编号获取
-        Example versionSignalExample = new Example(DevVersionSignal.class);
-        versionSignalExample.createCriteria().andIn("modelVersionCode", importExcelDevDTO.getModelCodeToModelSignalMap().keySet());
-        List<DevVersionSignal> dbdevVersionSignalList = devVersionSignalMapper.selectByExample(versionSignalExample); // 查询数据库中存在的版
+        List<DevVersionSignal> dbdevVersionSignalList = new ArrayList<>();
+        for (String key : importExcelDevDTO.getModelCodeToModelSignalMap().keySet()) {
+            // 从缓存中获取,使用缓存虽然减少与数据库的交互，但是可能会有数据不准确的情况
+            List<DevVersionSignal> dsList = devModelsCache.getDevVersionSignalsByModelVersionCode(key);
+            if(!CollectionUtils.isEmpty(dsList)) {
+                dbdevVersionSignalList.addAll(dsList);
+            }
+        }
+
+//        Example versionSignalExample = new Example(DevVersionSignal.class);
+//        versionSignalExample.createCriteria().andIn("modelVersionCode", importExcelDevDTO.getModelCodeToModelSignalMap().keySet());
+//        List<DevVersionSignal> dbdevVersionSignalList = devVersionSignalMapper.selectByExample(versionSignalExample); // 查询数据库中存在的版
         for (DevVersionSignal s : dbdevVersionSignalList) { // 给已经存在的信号点添加id
             String modelVersionCode = s.getModelVersionCode();
             importExcelDevDTO.getModelCodeToModelSignalMap().get(modelVersionCode).get(s.getSignalName()).setId(s.getId()); // 给查询到的数据添加id
@@ -599,9 +608,16 @@ public class DevServiceImpl implements DevService{
         // 4.查询设备的信号点 设备id
         List<DevSignal> dbDevSignalList = new ArrayList<>();
         if (!CollectionUtils.isEmpty(exsitDevIdList)) {
-            Example devSignalExample = new Example(DevSignal.class);
-            devSignalExample.createCriteria().andIn("devId", exsitDevIdList);
-            dbDevSignalList = devSignalMapper.selectByExample(devSignalExample);
+            for (Long devId : exsitDevIdList) {
+                // 从缓存中获取,虽然使用缓存减少与数据库的交互，但是不是那么的准确
+                List<DevSignal> devSignalListByDevId = devModelsCache.getDevSignalListByDevId(devId);
+                if (!CollectionUtils.isEmpty(devSignalListByDevId)) {
+                    dbDevSignalList.addAll(devSignalListByDevId);
+                }
+            }
+            // Example devSignalExample = new Example(DevSignal.class);
+            // devSignalExample.createCriteria().andIn("devId", exsitDevIdList);
+            // dbDevSignalList = devSignalMapper.selectByExample(devSignalExample);
         }
         importExcelDevDTO.initDevNameToDevSignalMap(); // 初始化设备与信号点之间的关系
         for(DevSignal s : dbDevSignalList) {
@@ -632,18 +648,24 @@ public class DevServiceImpl implements DevService{
         // 批量新增缓存
         try {
             // 保存版本信息
-            devModelsCache.setDevModelVersion(importExcelDevDTO.getParentModelVersion());
-            devModelsCache.batchInsertDevModelVersion(importExcelDevDTO.getChildrenModelVersions());
+            devModelsCache.setDevModelVersion(importExcelDevDTO.getParentModelVersion()); // 保存父版本缓存
+            devModelsCache.batchInsertDevModelVersion(importExcelDevDTO.getChildrenModelVersions()); // 保存通管机下挂版本
             // 保存设备信息
-            devModelsCache.setDevInifo(importExcelDevDTO.getParentDev());
-            devModelsCache.batchDevs(importExcelDevDTO.getChildrenDevs());
+            devModelsCache.setDevInifo(importExcelDevDTO.getParentDev()); // 保存通管机设备
+            devModelsCache.batchDevs(importExcelDevDTO.getChildrenDevs()); // 保存通管机下挂设备
+            // 保存版本信号点模型信息
+            devModelsCache.batchAddVersionSignals(importExcelDevDTO.getAllDevVersionSignals());
+            // 保存设备信号点信息入缓存
+            List<DevSignal> signalList = new ArrayList<>();
+            importExcelDevDTO.getDevNameToSiganlMap().values().forEach(ss -> signalList.addAll(ss));
+            devModelsCache.batchAddDevSignal(signalList);
         }catch (Exception e) {
             log.error("save devInfo failed:", e);
         }
     }
 
     /**
-     * 删除版本信息
+     * 删除通管机版本信息
      * @param id 版本的id
      */
     @Transactional // 统一提交事务
@@ -696,7 +718,6 @@ public class DevServiceImpl implements DevService{
             // 删除设备的缓存
         }
 
-
         // 5.删除版本 和子版本
         Example delDevVersionExample = new Example(DevModelVersion.class);
         delDevVersionExample.createCriteria().andIn("id", allModelIdList);
@@ -712,6 +733,10 @@ public class DevServiceImpl implements DevService{
             this.devModelsCache.batchDelDevVersionCaches(devModelVersions); // 删除子版本
             // 7.2删除设备的缓存
             this.devModelsCache.batchDelDevInfos(devInfos);
+            // 7.3 删除版本信号点模型
+            this.devModelsCache.clearDevVersionSignalByModelVersionCodeList(allModelCodeList);
+            // 7.4 删除设备信号点的模型
+            this.devModelsCache.deleteDevSignalByDevIdList(devIds);
         }catch (Exception e) {
             log.error("has exception:", e);
         }

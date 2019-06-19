@@ -41,11 +41,13 @@ public class UserAuthInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String servletPath = request.getServletPath();
+        log.info("servletPath = " + servletPath);
         for (String w : NO_INTERSEPTOR_LIST) { // 如果是白名单的不需要做拦截
             if (StringUtils.startsWith(servletPath, w)) {
                 return true;
             }
         }
+        log.info("开始鉴权:servletPath=" + servletPath);
         String token = request.getHeader(RedisConstants.REQUEST_TOKEN_ID);
         if (StringUtils.isBlank(token)) { // 如果获取的用户信息是空的
             token = request.getParameter(RedisConstants.REQUEST_TOKEN_ID);

@@ -9,3 +9,12 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+# 打印对应的包下的日志
+logging:
+  level:
+    xifu.com: debug
+    org: info
+    com: info
+  path: D:/xifu/logs
+  file: D:/xifu/logs/register.log

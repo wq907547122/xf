@@ -3,30 +3,30 @@ package xifu.com.cache;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
-import org.springframework.data.redis.connection.RedisStringCommands;
-import org.springframework.data.redis.core.RedisCallback;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.data.redis.core.TimeoutUtils;
-import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.data.redis.core.types.Expiration;
+import org.springframework.data.redis.core.*;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
+import tk.mybatis.mapper.entity.Example;
 import xifu.com.mapper.DevInfoMapper;
 import xifu.com.mapper.DevModelVersionMapper;
+import xifu.com.mapper.DevSignalMapper;
+import xifu.com.mapper.DevVersionSignalMapper;
 import xifu.com.pojo.devService.DevInfo;
 import xifu.com.pojo.devService.DevModelVersion;
+import xifu.com.pojo.devService.DevSignal;
+import xifu.com.pojo.devService.DevVersionSignal;
 import xifu.com.utils.JsonUtils;
 
 import javax.annotation.PostConstruct;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * 设备模块的缓存信息
@@ -41,7 +41,14 @@ public class DevModelsCache {
     @Autowired
     private DevModelVersionMapper devModelVersionMapper;
     @Autowired
+    private DevVersionSignalMapper devVersionSignalMapper;
+    @Autowired
     private DevInfoMapper devInfoMapper;
+    @Autowired
+    private DevSignalMapper devSignalMapper;
+    // 是否重新初始化redis的缓存
+    @Value("${xifu.isRedisCacheInit}")
+    private Boolean isRedisCacheInit;
     private Long lockTime = 5 * 60 * 1000L; // 锁定时间5分钟,即5分钟内不查询数据库
     private Long cacheExpireTime = 24 * 60 * 60 * 1000L; // 过期时间为1天
     private TimeUnit timeUnit = TimeUnit.MILLISECONDS; // 过期时间的单位 这里使用ms
@@ -51,9 +58,13 @@ public class DevModelsCache {
 
     /**
      * 启动程序的时候初始化缓存数据 1：清空缓存 2：设置数据库中的缓存
+     * 这个可以提供一个api的接口，共外面的调用
      */
     @PostConstruct
     public void init() {
+        if (!isRedisCacheInit) { // 如果不需要初始化
+            return;
+        }
         // 1.清除缓存
         Set<String> keys = template.keys(CacheConstant.CACHE_DEV_PREX_PATTERN);
         if (!CollectionUtils.isEmpty(keys)) { // 批量删除key
@@ -62,8 +73,56 @@ public class DevModelsCache {
         // 2.查询数据
         List<DevModelVersion> devModelVersions = devModelVersionMapper.selectAll();
         this.batchInsertDevModelVersion(devModelVersions);
-        List<DevInfo> devInfos = devInfoMapper.selectAll();
+        Example example = new Example(DevInfo.class);
+        example.createCriteria().andEqualTo("isLogicDelete", false);
+        List<DevInfo> devInfos = devInfoMapper.selectByExample(example);
         this.batchDevs(devInfos);
+        // 查询版本信号点信息
+        List<String> modelVersionCodeList = new ArrayList<>();
+        int count = 0;
+        for(DevModelVersion v : devModelVersions) {
+            count ++;
+            modelVersionCodeList.add(v.getModelVersionCode());
+            if (count % 5 == 0) { // 每5个版本添加一次版本信号点信息
+                this.batchAddVersionSignals(findDevVersionSingalList(modelVersionCodeList));
+                modelVersionCodeList.clear();
+            }
+        }
+        if (!CollectionUtils.isEmpty(modelVersionCodeList)) {
+            this.batchAddVersionSignals(findDevVersionSingalList(modelVersionCodeList));
+        }
+        // 缓存设备的信号点
+        count = 0;
+        List<Long> devIdList = new ArrayList<>();
+        for(DevInfo d : devInfos) {
+            count ++;
+            devIdList.add(d.getId());
+            if (count % 20 == 0) { // 20个设备添加一次
+                batchAddDevSignal(getSignalPageInfoBatch(devIdList));
+                devIdList.clear();
+            }
+        }
+        if (!CollectionUtils.isEmpty(devIdList)) {
+            batchAddDevSignal(getSignalPageInfoBatch(devIdList));
+        }
+        log.info("init redis cache end");
+    }
+
+    /**
+     * 获取信号点的分页信息，避免一次查询数据过多
+     * @param devIdList 设备列表
+     * @return
+     */
+    private List<DevSignal> getSignalPageInfoBatch(List<Long> devIdList){
+        Example example = new Example(DevSignal.class);
+        example.createCriteria().andIn("devId", devIdList);
+        return devSignalMapper.selectByExample(example);
+    }
+
+    private List<DevVersionSignal> findDevVersionSingalList(List<String> devVersionCodeList) {
+        Example example = new Example(DevVersionSignal.class);
+        example.createCriteria().andIn("modelVersionCode", devVersionCodeList);
+        return this.devVersionSignalMapper.selectByExample(example);
     }
     /**
      * 根据版本号获取缓存中的版本信息
@@ -453,7 +512,6 @@ public class DevModelsCache {
         return CacheConstant.DEV_NAME_PREX + getDevNameKey(stationCode, devName);
     }
 
-    // 批量删除设备缓存的信息
 
     /**
      * 批量删除设备缓存的信息
@@ -469,4 +527,314 @@ public class DevModelsCache {
         }
     }
     // ====<<<==== 设备信息的缓存相关代码 结束 =======<<<=====
+
+    // ===>>>>==== 版本的信号点内容的缓存 开始 =======>>>=====
+    // 获取版本信号点的key
+    private String getVersionSignalKeyByVersionCode(String versionCode){
+        return CacheConstant.MODEL_SIGNAL_ID_VERSION_PREX + versionCode;
+    }
+
+    /**
+     * 新增一个版本的信号点的缓存
+     * 信号点的缓存是通过版本找到版本的所有信号点<modelVersionCode, <signalId, signal>>
+     * @param signal
+     */
+    public void addVersionSignal(DevVersionSignal signal) {
+        if (signal == null || signal.getId() == null) {
+            return;
+        }
+        String key = getVersionSignalKeyByVersionCode(signal.getModelVersionCode());
+        BoundHashOperations<String, Object, Object> opts = template.boundHashOps(key);
+        opts.put(signal.getId().toString(), JsonUtils.toJson(signal));
+    }
+
+    /**
+     * 批量新增版本模型信号点
+     * @param list
+     */
+    public void batchAddVersionSignals(List<DevVersionSignal> list) {
+        if (CollectionUtils.isEmpty(list)) {
+            return;
+        }
+        // 循环新增，这里就不使用管道了
+        for(DevVersionSignal signal : list) {
+            this.addVersionSignal(signal);
+        }
+    }
+
+    /**
+     * 获取一个版本对应的版本信号点集合
+     * 批量获取版本的所有信号点模型, 没有使用过期的时间
+     * @param modelVersionCode
+     * @return
+     */
+    public List<DevVersionSignal> getDevVersionSignalsByModelVersionCode(String modelVersionCode) {
+        if (StringUtils.isBlank(modelVersionCode)) {
+            return null;
+        }
+        String key = getVersionSignalKeyByVersionCode(modelVersionCode);
+        BoundHashOperations<String, String, String> ops = template.boundHashOps(key);
+        List<String> values = ops.values();
+        if (CollectionUtils.isEmpty(values)) {
+            return null;
+        }
+        return values.stream().map(s -> JsonUtils.jsonToPojo(s, DevVersionSignal.class)).collect(Collectors.toList());
+    }
+
+    /**
+     * 从redis缓存中，根据版本信息(modelVersionCode)和版本信号点id获取一个版本信号点的信息
+     * @param modelVersionCode 版本编号
+     * @param signalId 信号点id
+     * @return
+     */
+    public DevVersionSignal getDevVersionSiganlById(String modelVersionCode, Long signalId) {
+        if (StringUtils.isBlank(modelVersionCode) || signalId == null) {
+            return null;
+        }
+        BoundHashOperations<String, String, String> opts = template.boundHashOps(getVersionSignalKeyByVersionCode(modelVersionCode));
+        String s = opts.get(signalId.toString());
+        if (StringUtils.isBlank(s)) {
+            return null;
+        }
+        return JsonUtils.jsonToPojo(s, DevVersionSignal.class);
+    }
+
+    /**
+     * 根据版本编号和信号点名称获取 版本信号点
+     * @param modelVersionCode
+     * @param signalName
+     * @return
+     */
+    public DevVersionSignal getDevVersionSignalBySignalName(String modelVersionCode, String signalName) {
+        if (StringUtils.isBlank(modelVersionCode) || StringUtils.isBlank(signalName)) {
+            return null;
+        }
+        BoundHashOperations<String, String, String> opts = template.boundHashOps(getVersionSignalKeyByVersionCode(modelVersionCode));
+        List<String> values = opts.values();
+        if (CollectionUtils.isEmpty(values)) {
+            return null;
+        }
+        Optional<String> first = values.stream().filter(s -> {
+            DevVersionSignal v = JsonUtils.jsonToPojo(s, DevVersionSignal.class);
+            return v == null ? false : StringUtils.equals(v.getSignalName(), signalName);
+        }).findFirst();
+        if (!first.isPresent()) { // 如果不存在,即没有找到
+            return null;
+        }
+        return JsonUtils.jsonToPojo(first.get(), DevVersionSignal.class);
+    }
+
+    /**
+     * 清除版本信号点模型的信号点
+     * @param modelVersionCode
+     */
+    public void clearDevVersionSignalByModelVersionCode(String modelVersionCode){
+        if (StringUtils.isBlank(modelVersionCode)) {
+            return;
+        }
+        template.delete(getVersionSignalKeyByVersionCode(modelVersionCode));
+//        BoundHashOperations<String, String, String> opts = template.boundHashOps(getVersionSignalKeyByVersionCode(modelVersionCode));
+//        Set<String> keys = opts.keys();
+//        if (!CollectionUtils.isEmpty(keys)) {
+//            opts.delete(keys);
+//        }
+    }
+
+    /**
+     * 清除版本列表的模型信号点的缓存
+     * @param modelVersionCodeList
+     */
+    public void clearDevVersionSignalByModelVersionCodeList(List<String> modelVersionCodeList) {
+        if (CollectionUtils.isEmpty(modelVersionCodeList)) {
+            return;
+        }
+        // 批量删除信号点
+        modelVersionCodeList.forEach(v -> clearDevVersionSignalByModelVersionCode(v));
+    }
+
+    // ===<<<<==== 版本的信号点内容的缓存 结束 =======<<<=====
+
+
+
+    // ===>>>>==== 设备信号点的缓存 开始 =======>>>=====
+    // 设备信号点的缓存通过设备id -> 设备信号点的集合的缓存
+
+    /**
+     * 新增信号点信息
+     * @param signal
+     */
+    public void addDevSignal(DevSignal signal) {
+        if (signal == null || signal.getId() == null || signal.getDevId() == null) {
+            log.warn("no dev signal need add");
+            return;
+        }
+        String devSignalKey = getDevSignalKey(signal.getDevId().toString());
+        BoundHashOperations<String, String, String> opts = template.boundHashOps(devSignalKey);
+        opts.put(signal.getId().toString(), JsonUtils.toJson(signal));
+    }
+
+    /**
+     * 批量新增设备信号点
+     * @param signalList
+     */
+    public void batchAddDevSignal(List<DevSignal> signalList) {
+        if (CollectionUtils.isEmpty(signalList)) {
+            log.warn("batch add signal is empty");
+            return;
+        }
+        // 组装保存数据<devId, <信号点id, 信号点的字符串>>
+        Map<String, Map<String, String>> datas = new HashMap<>();
+        for(DevSignal s : signalList) { // 准备存储数据
+            if (s == null || s.getId() == null || s.getDevId() == null) { // 信息缺少，不入缓存
+                continue;
+            }
+            String devId = s.getDevId().toString();
+            if(!datas.containsKey(devId)) {
+                datas.put(devId, new HashMap<>());
+            }
+            datas.get(devId).put(s.getId().toString(), JsonUtils.toJson(s));
+        }
+        if (CollectionUtils.isEmpty(datas)) { // 一般是集合中的信号点都是缺少信号点id或者设备id
+            log.warn("batch add signal all loss data");
+            return;
+        }
+        // 循环存储缓存
+        for(Map.Entry<String, Map<String, String>> entry : datas.entrySet()) {
+            BoundHashOperations<String, String, String> opts = template.boundHashOps(getDevSignalKey(entry.getKey()));
+            opts.putAll(entry.getValue()); // 批量存储
+        }
+    }
+
+    /**
+     * 获取设备信号点
+     * @param devId 设备id
+     * @param signalId 信号点id
+     * @return
+     */
+    public DevSignal getDevSignal(Long devId, Long signalId) {
+        if (devId == null || signalId == null) {
+            log.warn("get signal failed, has data is empty");
+            return null;
+        }
+        BoundHashOperations<String, String, String> opts = template.boundHashOps(getDevSignalKey(devId.toString()));
+        String s = opts.get(signalId.toString());
+        if (StringUtils.isBlank(s)) { // 没有数据缓存
+            return null;
+        }
+        return JsonUtils.jsonToPojo(s, DevSignal.class);
+    }
+
+    /**
+     * 返回一个设备的指定信号点id的集合
+     * @param devId
+     * @param signalIdList
+     * @return
+     */
+    public List<DevSignal> getDevSignalList(Long devId, List<Long> signalIdList) {
+        if (devId == null || CollectionUtils.isEmpty(signalIdList)) {
+            log.warn("get signal failed, has data is empty");
+            return null;
+        }
+        BoundHashOperations<String, String, String> opts = template.boundHashOps(getDevSignalKey(devId.toString()));
+        List<String> sinalIdStrList = signalIdList.stream().filter(sId -> sId != null).map(s -> s.toString()).collect(Collectors.toList());
+        List<String> sList = opts.multiGet(sinalIdStrList);
+        return castDevSignals(devId, sList); // 将字符串的list转换为信号点的对象集合
+    }
+
+    /**
+     * 获取设备的所有信号点
+     * @param devId 设备id
+     * @return
+     */
+    public List<DevSignal> getDevSignalListByDevId(Long devId) {
+        if (devId == null) {
+            return null;
+        }
+        BoundHashOperations<String, String, String> opts = template.boundHashOps(getDevSignalKey(devId.toString()));
+        List<String> sList = opts.values();
+        return castDevSignals(devId, sList); // 将字符串的list转换为信号点的对象集合
+    }
+
+    /**
+     * 根据设备id获取设备信号点的map信息
+     * 信号点的map信息: <信号点名称，信号点的对象>
+     * @param devId 设备id
+     * @return
+     */
+    public Map<String, DevSignal> getDevSignalNameMapByDevId(Long devId) {
+        List<DevSignal> devSignalListByDevId = getDevSignalListByDevId(devId);
+        if (CollectionUtils.isEmpty(devSignalListByDevId)) {
+            return null;
+        }
+        Map<String, DevSignal> result = new HashMap<>();
+        devSignalListByDevId.forEach(s -> result.put(s.getSignalName(), s));
+        return result;
+    }
+
+    /**
+     * 根据设备id获取设备信号点的map信息
+     * 信号点的map信息: <信号点Id，信号点的对象>
+     * @param devId 设备id
+     * @return
+     */
+    public Map<Long, DevSignal> getDevSignalIdMapByDevId(Long devId) {
+        List<DevSignal> devSignalListByDevId = getDevSignalListByDevId(devId);
+        if (CollectionUtils.isEmpty(devSignalListByDevId)) {
+            return null;
+        }
+        Map<Long, DevSignal> result = new HashMap<>();
+        devSignalListByDevId.forEach(s -> result.put(s.getId(), s));
+        return result;
+    }
+    // 获取信号点的字符串集合转换为对象
+    private List<DevSignal> castDevSignals(Long devId, List<String> sList) {
+        if (CollectionUtils.isEmpty(sList)) {
+            log.warn("no data devId = {}", devId);
+            return null;
+        }
+        Class<DevSignal> devSignalClass = DevSignal.class;
+        return sList.stream().filter(s -> StringUtils.isNotBlank(s)).
+                map(s -> JsonUtils.jsonToPojo(s, devSignalClass)).collect(Collectors.toList());
+    }
+
+    /**
+     * 获取设备信号点的缓存
+     * @param devId
+     * @return
+     */
+    private String getDevSignalKey(String devId) {
+        return CacheConstant.DEV_SIGNAL_PREX + devId;
+    }
+
+    /**
+     * 批量删除设备信号点的缓存的信息
+     * @param devId 设备id
+     */
+    public void deleteDevSignalByDevId(Long devId) {
+        if (devId == null) {
+            return;
+        }
+        template.delete(getDevSignalKey(devId.toString()));
+    }
+    // 根据设备id删除信息
+    public void deleteDevSignalByDevIdList(List<Long> devIdList) {
+        if (CollectionUtils.isEmpty(devIdList)) {
+            return;
+        }
+        devIdList.forEach(id -> deleteDevSignalByDevId(id));
+    }
+
+    /**
+     * 删除设备的一个信号点缓存
+     * @param devId 设备id
+     * @param signalId 设备信号点
+     */
+    public void deleteDevSignalByDevIdAndSignalId(Long devId, Long signalId) {
+        if (devId == null || signalId == null) {
+            return;
+        }
+        BoundHashOperations<String, String, String> opts = template.boundHashOps(getDevSignalKey(devId.toString()));
+        opts.delete(signalId.toString());
+    }
+    // ===<<<<==== 设备信号点的缓存 结束 =======<<<=====
 }

@@ -348,29 +348,27 @@ CREATE TABLE `tb_dev_alarm_model` (
   KEY `idx_ids_alarm_model` (`enterprise_id`,`model_version_code`,`alarm_id`,`cause_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
--- 各个设备类型的归一化模型
-drop table if exists tb_dev_normalized_model;
-CREATE TABLE `tb_dev_normalized_model` (
-  `id` bigint(19) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
-  `dev_type` bigint(19) DEFAULT NULL COMMENT '设备类型id',
-  `signal_name` varchar(64) DEFAULT '' COMMENT '归一化信号点名称',
-  `display_name` varchar(64) DEFAULT '' COMMENT '展示名称',
-  `column_name` varchar(32) DEFAULT '' COMMENT '信号点字段名称，持久化表到字段名',
-  `is_persistent` tinyint(1) DEFAULT NULL COMMENT '是否持久化:0不持久化；1持久化',
-  `order_num` int(20) DEFAULT NULL COMMENT '序号',
-  `create_date` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  `modified_date` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='归一化信号点配置表';
 
--- 设备类型表信息
+-- 设备类型的归一化模型
 drop table if exists tb_dev_normalized_model;
 CREATE TABLE `tb_dev_normalized_model` (
-	`id` bigint(19) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
-	`name` varchar(64) DEFAULT NULL COMMENT '设备类型的名称',
+	`id` bigint(16) NOT NULL COMMENT '主键ID',
+	`name` varchar(64) DEFAULT NULL COMMENT '归一化的名称',
+	`column_name` varchar(64) DEFAULT NULL COMMENT '信号点字段名称，持久化表到字段名',
+	`dev_type_id` int(8) default null comment '设备类型',
+	`is_persist` smallint(1) default 0 comment '是否持久化, 1:对应的点会持久化， 0：不持久化. 即是否使用它来将数据添加到性能数据表中',
+	`order_num` int(3) DEFAULT NULL COMMENT '排序号',
 	`description` varchar(256) DEFAULT NULL COMMENT '对列的说明和描述',
 	PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='归一化信号点配置表';
+-- 这里规定对应不同的设备类型，每隔设备类型所占的信号点信息在100区间(足够需要展示的信息了,不足100个点的留下来待如果有需要的扩展)
+-- 组串式逆变器  1  1 - 100,  101 - 200, 201 - 300, 301 - 400, 401 - 500
+INSERT INTO `tb_dev_normalized_model` (`id`, `name`, `column_name`, `dev_type_id`, `is_persist`, `order_num`, `description`) VALUES ('1', '逆变器状态', 'inverter_state', '1', '1', '1', '逆变器状态');
+INSERT INTO `tb_dev_normalized_model` (`id`, `name`, `column_name`, `dev_type_id`, `is_persist`, `order_num`, `description`) VALUES ('2', '电网AB电压', 'ab_u', '1', '1', '2', '电网AB电压');
+INSERT INTO `tb_dev_normalized_model` (`id`, `name`, `column_name`, `dev_type_id`, `is_persist`, `order_num`, `description`) VALUES ('3', '电网BC电压', 'bc_u', '1', '1', '3', '电网BC电压');
+
+
+
 -- 对版本配置的归一化信息
 drop table if exists tb_dev_normalized_info;
 CREATE TABLE `tb_dev_normalized_info` (
@@ -378,7 +376,7 @@ CREATE TABLE `tb_dev_normalized_info` (
   `signal_id` int(19) DEFAULT NULL COMMENT '设备的信号点的id',
   `signal_name` varchar(64) DEFAULT NULL COMMENT '信号点名称',
   `model_version_code` varchar(32) DEFAULT '' COMMENT '点表版本，对应相同的版本信息配置的是相同的',
-  `signal_address` int(32) DEFAULT NULL COMMENT '信号点寄存器地址',
+  `signal_address` int(10) DEFAULT NULL COMMENT '信号点寄存器地址',
   `normalized_signal_id` bigint(20) DEFAULT NULL COMMENT '归一化信号模型id',
   `create_date` datetime DEFAULT NULL COMMENT '创建日期',
   `modified_date` datetime DEFAULT NULL COMMENT '修改日期',

@@ -24,5 +24,5 @@ xifu:
     secret: xifu@login(auth}^31&ids # 登录校验的密钥
     pubKeyPath: D:/jwt/rsa/rsa.pub # 公钥的文件地址. 后面给其他的地方解密的，不会给私钥，只给公钥
     priKeyPath: D:/jwt/rsa/rsa.pri # 私钥的文件地址. 加密的算法的文件，这个文件只有授权中心持有
-    exprie: 30 # 过期时间，单位分钟
+    exprie: 120 # 过期时间，单位分钟
     cookieName: XIFU_TOKEN # 存储的cookie的名称

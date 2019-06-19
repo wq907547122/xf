@@ -22,6 +22,7 @@ public enum ExceptionEnum {
     STATION_FOUND_MULT(500, "存在多个电站"),
     CREATE_STATION_ERROR(400, "创建电站失败"),
     EDIT_STATION_ERROR(400, "修改电站失败"),
+    DEV_TYPE_ERROR(400, "设备类型错误"),
     DOMAIN_NOT_FOUND(404, "区域不存在"),
     DOMAIN_EXSIT_CHILDREN_FOUND(400, "区域存在子区域，不能删除"),
     INVALID_USER_PARAM(400, "无效的用户参数"),
@@ -34,6 +35,9 @@ public enum ExceptionEnum {
     FILE_UPLOAD_FAILED(400, "文件上传失败"),
     POINT_IMPORT_PARSE_ERROR(500, "点表解析错误"),
     DEV_MODEL_VERSION_NOT_FOUND(404, "版本信息不存在"),
+    DEV_MODEL_VERSION_SIGNAL_NOT_FOUND(404, "版本信号点不存在"),
+    SAVE_NORMALIZED_PARAM_ERROR(400, "保存归一化的配置信息参数错误"),
+    SAVE_NORMALIZED_FALED(400, "保存归一化版本适配失败"),
     ;
     private int code;
     private String msg;

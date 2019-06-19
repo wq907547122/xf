@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import xifu.com.cache.DevModelsCache;
 import xifu.com.pojo.devService.DevModelVersion;
 import xifu.com.service.DevService;
 import xifu.com.service.impl.DevModelVersionService;
@@ -25,6 +26,8 @@ public class DevModelVersionController {
 
     @Autowired
     private DevService devService;
+    @Autowired
+    private DevModelsCache devModelsCache;
 
     /**
      * 查询当前版本的分页信息,只查询第一级的，不查询下面的子版本
@@ -48,5 +51,15 @@ public class DevModelVersionController {
     public ResponseEntity<Void> deleteById(@PathVariable("id") Long id) {
         devService.deleteById(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+    /**
+     * 重新设置缓存信息,避免数据错误导致的
+     * @return
+     */
+    @GetMapping("cache")
+    public ResponseEntity<Void> resetDevCache() {
+        devModelsCache.init();
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 }
