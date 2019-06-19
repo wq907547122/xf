@@ -14,8 +14,8 @@
         </div>
       </el-col>
       <el-col :span="8" :xs="0" :sm="2" :md="10" :lg="10" :xl="10">
-        <el-menu mode="horizontal" router :default-active="activeIndex"
-                 unique-opened
+        <el-menu mode="horizontal" :router="true" :default-active="activePath"
+                 :unique-opened="true"
                  background-color="transparent" text-color="#FFFFFF" active-text-color="#00F6FF">
           <el-menu-item v-for="item in permissionRoutes" :key="item.path"
                         v-if="!item.hidden && item.type === 'menu' && item.children.length" :route="{path: item.path}"
@@ -146,6 +146,7 @@ export default {
       'permissionRoutes'
     ]),
     activeIndex () { // 当前路由活动的路径
+      console.log(this.$route.path)
       return this.$route.path
     }
   }

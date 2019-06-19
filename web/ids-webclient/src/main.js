@@ -22,6 +22,7 @@ import i18n from './i18n'
 import store from './store'
 import VueLazyload from 'vue-lazyload'
 import { directive as Clickaway } from 'vue-clickaway'
+import VueDND from 'awe-dnd'
 import ECharts from 'vue-echarts/components/ECharts'
 // 手动引入 ECharts 各模块来减小打包体积
 import 'echarts/lib/chart/bar'
@@ -48,6 +49,8 @@ Vue.use(VueLazyload, {
 })
 // 添加点击外部执行的事件
 Vue.directive('clickoutside', Clickaway)
+// 拖动组件的组件的引用
+Vue.use(VueDND)
 // 对时间的格式化的操作的插件
 // const moment = require('moment')
 // Vue.use(require('vue-moment'), {

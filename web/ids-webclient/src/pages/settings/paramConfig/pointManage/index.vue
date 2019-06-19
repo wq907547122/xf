@@ -1,88 +1,107 @@
 <template>
   <!-- 点表管理模块：点表导入和归一化配置的信息 -->
   <div>
-    <!-- 点表导入 -->
-    <el-form :inline="true" style="float: left;">
-      <el-form-item>
-        <el-input disabled :value="myFileName" placeholder="请选择文件"></el-input>
-      </el-form-item>
-      <el-form-item>
-        <fileUpload
-          :uploadUrl="importUrl"
-          fileTypeError="请选择excl文件"
-          @on-validate-success="setInputText"
-          :isShowTip="false"
-          :userValidate="myFileType"
-          @on-upload-success="uploadSuccess"
-        ></fileUpload>
-      </el-form-item>
-    </el-form>
-    <!-- 展示以及导入了的点表信息列表 -->
-    <el-table ref="versionTable"
-      :data="versionList"
-      @selection-change="handleSelectionChange"
-      @row-click="rowClick"
-      border
-      style="width: 100%">
-      <el-table-column
-        type="selection"
-        width="55"
-        align="center"
-      >
-      </el-table-column>
-      <el-table-column
-        align="center"
-        prop="name"
-        label="点表名称">
-      </el-table-column>
-      <el-table-column
-        align="center"
-        prop="devTypeId"
-        label="设备类型">
-        <template slot-scope="{row}">
-          {{ $t('devTypeId.' + row.devTypeId) }}
-        </template>
-      </el-table-column>
-      <el-table-column
-        align="center"
-        prop="modelVersionCode"
-        label="版本号">
-      </el-table-column>
-      <el-table-column
-        align="center"
-        prop="createDate"
-        label="导入日期">
-        <template slot-scope="{row}">
-          {{row.createDate | dateFormat('yyyy-MM-dd HH:mm:ss')}}
-        </template>
-      </el-table-column>
-      <el-table-column
-        align="center"
-        prop="p"
-        label="操作">
-        <template slot-scope="{row}">
-          <el-button type="primary" icon="el-icon-info" size="mini">详情</el-button>
-          <el-button type="danger" icon="el-icon-delete" size="mini" @click.stop="deleteVersion(row)">删除</el-button>
-        </template>
-      </el-table-column>
-    </el-table>
-    <!-- 分页栏 -->
-    <el-pagination
-      @size-change="pageSizeChange"
-      @current-change="pageChange"
-      :current-page="searchData.page"
-      :page-sizes="[10, 20, 30, 50]"
-      :page-size="searchData.pageSize"
-      layout="total, sizes, prev, pager, next, jumper"
-      :total="total">
-    </el-pagination>
+    <el-tabs v-model="activeName" @tab-click="handleClick">
+      <!-- 点表导入的tab -->
+      <el-tab-pane label="点表导入" name="port">
+        <!-- 点表导入 -->
+        <el-row>
+          <el-col :span="12">
+            <el-form :inline="true">
+              <el-form-item>
+                <el-input disabled :value="myFileName" placeholder="请选择文件"></el-input>
+              </el-form-item>
+              <el-form-item>
+                <fileUpload
+                  :uploadUrl="importUrl"
+                  fileTypeError="请选择excl文件"
+                  @on-validate-success="setInputText"
+                  :isShowTip="false"
+                  :userValidate="myFileType"
+                  @on-upload-success="uploadSuccess"
+                ></fileUpload>
+              </el-form-item>
+            </el-form>
+          </el-col>
+          <el-col :span="12">
+            <div>
+              <el-button type="primary" @click="resetCache" icon="el-icon-refresh" size="mini" v-if="isShowRest">重置缓存</el-button>
+            </div>
+          </el-col>
+        </el-row>
+        <!-- 展示以及导入了的点表信息列表 -->
+        <el-table ref="versionTable"
+                  :data="versionList"
+                  @selection-change="handleSelectionChange"
+                  @row-click="rowClick"
+                  border
+                  style="width: 100%">
+          <el-table-column
+            type="selection"
+            width="55"
+            align="center"
+          >
+          </el-table-column>
+          <el-table-column
+            align="center"
+            prop="name"
+            label="点表名称">
+          </el-table-column>
+          <el-table-column
+            align="center"
+            prop="devTypeId"
+            label="设备类型">
+            <template slot-scope="{row}">
+              {{ $t('devTypeId.' + row.devTypeId) }}
+            </template>
+          </el-table-column>
+          <el-table-column
+            align="center"
+            prop="modelVersionCode"
+            label="版本号">
+          </el-table-column>
+          <el-table-column
+            align="center"
+            prop="createDate"
+            label="导入日期">
+            <template slot-scope="{row}">
+              {{row.createDate | dateFormat('yyyy-MM-dd HH:mm:ss')}}
+            </template>
+          </el-table-column>
+          <el-table-column
+            align="center"
+            prop="p"
+            label="操作">
+            <template slot-scope="{row}">
+              <el-button type="primary" icon="el-icon-info" size="mini">详情</el-button>
+              <el-button type="danger" icon="el-icon-delete" size="mini" @click.stop="deleteVersion(row)">删除</el-button>
+            </template>
+          </el-table-column>
+        </el-table>
+        <!-- 分页栏 -->
+        <el-pagination
+          @size-change="pageSizeChange"
+          @current-change="pageChange"
+          :current-page="searchData.page"
+          :page-sizes="[10, 20, 30, 50]"
+          :page-size="searchData.pageSize"
+          layout="total, sizes, prev, pager, next, jumper"
+          :total="total">
+        </el-pagination>
+      </el-tab-pane>
+      <!-- 归一化配置的tab -->
+      <el-tab-pane label="归一化" name="normal">
+        <my-normalize></my-normalize>
+      </el-tab-pane>
+    </el-tabs>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 export default {
   components: {
-    fileUpload: () => import('@/components/fileUpload/index.vue')
+    fileUpload: () => import('@/components/fileUpload/index.vue'),
+    MyNormalize: () => import('./normalized.vue')
   },
   data () {
     return {
@@ -102,7 +121,9 @@ export default {
       // 当前的总记录数
       total: 0,
       // 当前多选的记录
-      multipleSelection: []
+      multipleSelection: [],
+      isShowRest: true,
+      activeName: 'port'
     }
   },
   created () { // 在创建的生命钩子中执行的加载数据
@@ -183,6 +204,26 @@ export default {
         .catch(() => {
           console.log('已取消删除')
         })
+    },
+    // 重新设置缓存的信息
+    resetCache () {
+      this.$confirm(`确认重新加载缓存?`, '提示',
+        {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        })
+        .then(() => {
+          // 重置redis缓存信息
+          this.$http.get('api/dev/devVersion/cache').then(resp => {
+            this.$message.info('重置成功')
+          }).catch(() => {
+            this.$message.error('重置失败')
+          })
+        })
+    },
+    handleClick (v) {
+      console.log(v.name)
     }
   },
   watch: {},
