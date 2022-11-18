@@ -47,7 +47,7 @@
     "file-loader": "^1.1.4",
     "font-awesome": "^4.7.0",
     "friendly-errors-webpack-plugin": "^1.6.1",
-    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-plugin": "^5.5.0",
     "leaflet": "^1.4.0",
     "leaflet-active-area": "^1.0.2",
     "leaflet-editable": "^1.2.0",
